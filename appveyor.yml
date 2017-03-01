@@ -22,7 +22,7 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   # Useful for debugging any issues with conda
   - conda info -a
-  - set ENVKEY=py%PYTHON_VERSION%_mpl%MPL_VERSION%
+  - set ENVKEY=py%PYTHON_VERSION%
   - conda env create -f tests/envs/environment_%ENVKEY%.yml
   - activate psyplot_%ENVKEY%
   # use latest development version

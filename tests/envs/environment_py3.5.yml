@@ -1,9 +1,9 @@
-name: psyplot_py3.5_mpl2.0
+name: psyplot_py3.5
 channels:
     - conda-forge
 dependencies:
     - python=3.5
-    - matplotlib=2.0
+    - matplotlib
     - dask
     - xarray
     - netCDF4

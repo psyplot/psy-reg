@@ -1,5 +1,4 @@
 language: generic
-env:
 matrix:
     include:
         # linux environments
@@ -44,7 +43,7 @@ install:
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
-  - 'ENVKEY=py"${PYTHON_VERSION}"_mpl"${MPL_VERSION}"'
+  - 'ENVKEY=py"${PYTHON_VERSION}"'
   - conda env create -f tests/envs/environment_$ENVKEY.yml
   - source activate psyplot_$ENVKEY
   # use latest development version
