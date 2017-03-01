@@ -5,28 +5,19 @@ matrix:
         # linux environments
         - env:
             - PYTHON_VERSION=3.6
-            - MPL_VERSION=1.5
           os: linux
         - env:
             - PYTHON_VERSION=3.5
-            -  MPL_VERSION=1.5
           os: linux
         - env:
             - PYTHON_VERSION=2.7
-            - MPL_VERSION=1.5
-          os: linux
-        - env:
-            - PYTHON_VERSION=2.7
-            - MPL_VERSION=1.4
           os: linux
         # osx environments
         - env:
             - PYTHON_VERSION=3.6
-            - MPL_VERSION=1.5
           os: osx
         - env:
             - PYTHON_VERSION=2.7
-            - MPL_VERSION=1.5
           os: osx
 install:
   # select the os name for the conda installer
