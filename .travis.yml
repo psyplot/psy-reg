@@ -72,7 +72,7 @@ install:
 
 script:
   # run the tests
-  - coverage run -a --source=psy_maps setup.py test -a "-v"
+  - coverage run -a --source=psy_reg setup.py test -a "-v"
 
 after_success:
   - coveralls
