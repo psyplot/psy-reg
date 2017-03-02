@@ -11,6 +11,17 @@ from psy_simple.plugin import (
 from psy_reg import __version__ as plugin_version
 
 
+def get_versions(requirements=True):
+    if requirements:
+        import scipy
+        import statsmodels
+        return {'version': plugin_version,
+                'requirements': {'scipy': scipy.__version__,
+                                 'statsmodels': statsmodels.__version__}}
+    else:
+        return {'version': plugin_version}
+
+
 # -----------------------------------------------------------------------------
 # ------------------------- validation functions ------------------------------
 # -----------------------------------------------------------------------------
