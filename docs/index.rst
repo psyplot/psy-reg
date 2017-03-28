@@ -1,6 +1,23 @@
-========================================================================
-psy-reg: Psyplot plugin for visualizing and calculating regression plots
-========================================================================
+.. psy-reg documentation master file, created by
+   sphinx-quickstart on Mon Jul 20 18:01:33 2015.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+.. _psy-reg:
+
+Psyplot plugin for visualizing and calculating regression plots
+===============================================================
+
+Welcome to the psyplot plugin for visualizating and calculating regression
+plots. This package uses the scipy_ and statsmodels_ packages to evaluate your
+data, fit a regression to it and visualize it through the psy-simple_ plugin.
+
+It's plot methods are the :attr:`~psyplot.project.ProjectPlotter.linreg` and
+:attr:`~psyplot.project.ProjectPlotter.densityreg` plot methods.
+
+See the :ref:`plot_methods` and :ref:`gallery_examples` for more information.
+
+.. _psy-simple: http://psyplot.readthedocs.io/projects/psy-simple/
 
 .. start-badges
 
@@ -54,18 +71,23 @@ psy-reg: Psyplot plugin for visualizing and calculating regression plots
 
 .. end-badges
 
-Welcome to the psyplot plugin for visualizating and calculating regression
-plots. This package uses the scipy_ and statsmodels_ packages to evaluate your
-data, fit a regression to it and visualize it through the psy-simple_ plugin.
 
-It's plot methods are the linreg_ and densityreg_ plot methods.
+Documentation
+-------------
 
-See the full documentation on
-`readthedocs.org <http://psyplot.readthedocs.io/projects/psy-simple>`__ for all
-`plot methods`_ and examples_.
+.. toctree::
+    :maxdepth: 1
 
-.. _psy-simple: http://psyplot.readthedocs.io/projects/psy-simple/
-.. _linreg: http://psyplot.readthedocs.io/projects/psy-reg/en/latest/generated/psyplot.project.plot.linreg.html#psyplot.project.plot.linreg
-.. _densityreg: http://psyplot.readthedocs.io/projects/psy-reg/en/latest/generated/psyplot.project.plot.densityreg.html#psyplot.project.plot.densityreg
-.. _plot methods: http://psyplot.readthedocs.io/projects/psy-simple/en/latest/plot_methods
-.. _examples: http://psyplot.readthedocs.io/projects/psy-simple/en/latest/examples
+    installing
+    plot_methods
+    examples/index
+    api/psy_reg
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

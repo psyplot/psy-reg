@@ -1,0 +1,24 @@
+name: psyplot_docs
+channels:
+    - conda-forge
+    - chilipp
+dependencies:
+    - python=3.5
+    - dask
+    - xarray
+    - netCDF4
+    - matplotlib
+    - seaborn
+    - ipython
+    - nbconvert
+    - jupyter_client
+    - ipykernel
+    - sphinx
+    - cartopy
+    - psyplot
+    - psy-simple
+    - pip:
+        - sphinx-argparse
+        - autodocsumm
+        - cdo
+        - sphinx-nbexamples

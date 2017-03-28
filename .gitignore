@@ -53,8 +53,12 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 docs/index.doctree
+docs/api/
+docs/generated
+docs/examples
 
 # test results
+matplotlibrc
 *psyplot_testresults
 tests/envs/cov_psyplot_py*
 tests/envs/psyplot_py*.html
