@@ -57,5 +57,6 @@ setup(name='psy-reg',
       ],
       tests_require=['pytest'],
       cmdclass={'test': PyTest},
-      entry_points={'psyplot': ['plugin=psy_reg.plugin']},
+      entry_points={'psyplot': ['plugin=psy_reg.plugin',
+                                'patches=psy_reg.plugin:patches']},
       zip_safe=False)

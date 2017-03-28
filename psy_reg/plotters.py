@@ -282,6 +282,7 @@ class LinearRegressionFit(Formatoption):
 
     def _scipy_curve_fit(self, x, y, x_line, **kwargs):
         from scipy.optimize import curve_fit
+        kwargs.pop('fix', None)
         params, pcov = curve_fit(self.model, x, y, **kwargs)
         if six.PY2:
             args = inspect.getargspec(self.model).args[1:]

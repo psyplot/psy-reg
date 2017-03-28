@@ -22,6 +22,21 @@ def get_versions(requirements=True):
         return {'version': plugin_version}
 
 
+def patch_prior_1_0(plotter_d, versions):
+    """Patch psy_reg plotters for versions smaller than 1.0
+
+    Before psyplot 1.0.0, the plotters in the psy_reg package where part of the
+    psyplot.plotters.linreg module. This has to be corrected"""
+    plotter_d['cls'] = ('psy_reg.plotters', plotter_d['cls'][1])
+
+
+#: patches to apply when loading a project
+patches = {
+    ('psyplot.plotter.linreg', 'LinRegPlotter'): patch_prior_1_0,
+    ('psyplot.plotter.linreg', 'DensityRegPlotter'): patch_prior_1_0,
+    }
+
+
 # -----------------------------------------------------------------------------
 # ------------------------- validation functions ------------------------------
 # -----------------------------------------------------------------------------
