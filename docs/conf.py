@@ -56,7 +56,7 @@ extensions = [
     'sphinxarg.ext',
     'psyplot.sphinxext.extended_napoleon',
     'autodocsumm',
-#    'sphinx_nbexamples',
+    'sphinx_nbexamples',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

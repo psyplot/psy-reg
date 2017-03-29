@@ -48,7 +48,7 @@ class XFitRange(psyps.Hist2DXRange):
     --------
     yrange, line_xlim"""
 
-    group = 'fit'
+    group = 'regression'
 
     @property
     def range(self):
@@ -100,7 +100,7 @@ class YFitRange(psyps.Hist2DYRange):
     --------
     xrange"""
 
-    group = 'fit'
+    group = 'regression'
 
     @property
     def range(self):
@@ -186,7 +186,7 @@ class LinearRegressionFit(Formatoption):
 
     data_dependent = True
 
-    group = 'fit'
+    group = 'regression'
 
     def __init__(self, *args, **kwargs):
         super(LinearRegressionFit, self).__init__(*args, **kwargs)
@@ -388,6 +388,8 @@ class IdealLine(Formatoption):
     id_color
     """
 
+    group = 'regression'
+
     dependencies = ['fit', 'id_color', 'plot']
 
     def initialize_plot(self, *args, **kwargs):
@@ -455,7 +457,7 @@ class FixPoint(Formatoption):
 
     name = 'Force the fit to go through a given point'
 
-    group = 'fit'
+    group = 'regression'
 
     connections = ['fit']
 
@@ -488,7 +490,7 @@ class NBoot(Formatoption):
 
     priority = START
 
-    group = 'fit'
+    group = 'regression'
 
     name = 'Set the bootstrapping number to calculate the confidence interval'
 
@@ -545,7 +547,7 @@ class Ci(Formatoption):
 
     priority = START
 
-    group = 'fit'
+    group = 'regression'
 
     name = 'Draw a confidence interval'
 

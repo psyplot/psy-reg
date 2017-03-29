@@ -18,6 +18,8 @@ It's plot methods are the :attr:`~psyplot.project.ProjectPlotter.linreg` and
 See the :ref:`plot_methods` and :ref:`gallery_examples` for more information.
 
 .. _psy-simple: http://psyplot.readthedocs.io/projects/psy-simple/
+.. _statsmodels: http://www.statsmodels.org/stable/index.html
+.. _scipy: https://www.scipy.org/
 
 .. start-badges
 

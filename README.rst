@@ -65,6 +65,8 @@ See the full documentation on
 `plot methods`_ and examples_.
 
 .. _psy-simple: http://psyplot.readthedocs.io/projects/psy-simple/
+.. _statsmodels: http://www.statsmodels.org/stable/index.html
+.. _scipy: https://www.scipy.org/
 .. _linreg: http://psyplot.readthedocs.io/projects/psy-reg/en/latest/generated/psyplot.project.plot.linreg.html#psyplot.project.plot.linreg
 .. _densityreg: http://psyplot.readthedocs.io/projects/psy-reg/en/latest/generated/psyplot.project.plot.densityreg.html#psyplot.project.plot.densityreg
 .. _plot methods: http://psyplot.readthedocs.io/projects/psy-simple/en/latest/plot_methods
