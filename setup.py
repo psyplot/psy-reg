@@ -1,3 +1,4 @@
+import os.path as osp
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 import sys
@@ -23,8 +24,13 @@ class PyTest(TestCommand):
         sys.exit(errno)
 
 
+# read the version from version.py
+with open(osp.join('psy_reg', 'version.py')) as f:
+    exec(f.read())
+
+
 setup(name='psy-reg',
-      version='1.0.0.dev0',
+      version=__version__,
       description=('Psyplot plugin for visualizing and calculating regression '
                    'plots'),
       long_description=readme(),
