@@ -63,18 +63,23 @@ class XFitRange(psyps.Hist2DXRange):
             self._range = value
 
     def update(self, value):
+        value = safe_list(value)
+        if np.ndim(value) == 1:
+            value = [value]
+        value = cycle(value)
         if isinstance(self.raw_data, InteractiveList) and (
                 self.index_in_list is None):
-            self.range = [[] * len(self.raw_data)]
-            for i in range(len(self.raw_data)):
+            self._range = [[] for _ in range(len(self.raw_data))]
+            for i, da in enumerate(list(self.iter_raw_data)):
                 self.index_in_list = i
-                super(XFitRange, self).update(value)
+                super(XFitRange, self).update(next(value))
+            self.index_in_list = None
         elif not isinstance(self.raw_data, InteractiveList) and (
                 self.index_in_list is not None):
-            self._range = [[] * (self.index_in_list + 1)]
-            super(XFitRange, self).update(value)
+            self._range = [[] for _ in range(self.index_in_list + 1)]
+            super(XFitRange, self).update(next(value))
         else:
-            super(XFitRange, self).update(value)
+            super(XFitRange, self).update(next(value))
 
     def set_limit(self, *args):
         pass  # is set during update
@@ -115,14 +120,23 @@ class YFitRange(psyps.Hist2DYRange):
             self._range = value
 
     def update(self, value):
+        value = safe_list(value)
+        if np.ndim(value) == 1:
+            value = [value]
+        value = cycle(value)
         if isinstance(self.raw_data, InteractiveList) and (
                 self.index_in_list is None):
-            self.range = [[] * len(self.raw_data)]
-            for i in range(len(self.raw_data)):
+            self._range = [[] for _ in range(len(self.raw_data))]
+            for i, da in enumerate(list(self.iter_raw_data)):
                 self.index_in_list = i
-                super(YFitRange, self).update(value)
+                super(YFitRange, self).update(next(value))
+            self.index_in_list = None
+        elif not isinstance(self.raw_data, InteractiveList) and (
+                self.index_in_list is not None):
+            self._range = [[] for _ in range(self.index_in_list + 1)]
+            super(YFitRange, self).update(next(value))
         else:
-            super(YFitRange, self).update(value)
+            super(YFitRange, self).update(next(value))
 
     def set_limit(self, *args):
         pass  # is set during update
@@ -196,15 +210,6 @@ class LinearRegressionFit(Formatoption):
         self.fits = [None] * len(list(self.iter_data))
         if value is None:
             return
-        elif callable(value):
-            self.model = value
-            self.method = 'curve_fit'
-        elif value.lower().startswith('poly'):
-            self.model = partial(np.polyfit, deg=int(value[4:]), cov=True)
-            self.method = 'poly'
-        else:
-            self.model = sm.RLM if value == 'robust' else sm.OLS
-            self.method = 'statsmodels'
         transpose = self.transpose.value
         for i, da in enumerate(self.iter_raw_data):
             kwargs = self.get_kwargs(i)
@@ -212,7 +217,7 @@ class LinearRegressionFit(Formatoption):
             x_line = self.get_xline(i)
             if self.coord.value is not None:
                 da = self.coord.replace_coord(i)
-            x_line, y_line, attrs, fit = self.make_fit(x, y, x_line=x_line,
+            x_line, y_line, attrs, fit = self.make_fit(i, x, y, x_line=x_line,
                                                        **kwargs)
             if transpose:
                 x_line, y_line = y_line, x_line
@@ -230,6 +235,18 @@ class LinearRegressionFit(Formatoption):
                 da.coords[da.dims[0]].attrs)
             self.set_data(da_fit, i)
             self.set_decoder(CFDecoder(da_fit.psy.base), i)
+
+    def set_method(self, i):
+        value = next(islice(cycle(safe_list(self.value)), i, i+1))
+        if callable(value):
+            self.model = value
+            self.method = 'curve_fit'
+        elif value.lower().startswith('poly'):
+            self.model = partial(np.polyfit, deg=int(value[4:]), cov=True)
+            self.method = 'poly'
+        else:
+            self.model = sm.RLM if value == 'robust' else sm.OLS
+            self.method = 'statsmodels'
 
     def get_kwargs(self, i):
         '''Get the fitting kwargs for the line at index `i`'''
@@ -260,8 +277,8 @@ class LinearRegressionFit(Formatoption):
             xname = da.dims[0]
             y = da.values
             yname = da.name
-        xrange = np.array(self.xrange.range)
-        yrange = np.array(self.yrange.range)
+        xrange = np.asarray(self.xrange.range)
+        yrange = np.asarray(self.yrange.range)
         if xrange.ndim == 1:
             xmin, xmax = xrange
             ymin, ymax = yrange
@@ -272,7 +289,8 @@ class LinearRegressionFit(Formatoption):
             y >= ymin) & (y <= ymax)
         return x[mask], xname, y[mask], yname
 
-    def make_fit(self, x, y, x_line=None, **kwargs):
+    def make_fit(self, i, x, y, x_line=None, **kwargs):
+        self.set_method(i)
         if self.method == 'statsmodels':
             return self._statsmodel_fit(x, y, x_line, **kwargs)
         elif self.method == 'poly':
@@ -404,13 +422,13 @@ class IdealLine(Formatoption):
         # if necessary
         self.id_color.update(self.id_color.value)
         self._plot = []
-        fit_type = self.fit.value
         if self.plot.value is None:
             linestyles = repeat('-')
         else:
             linestyles = cycle(safe_list(self.plot.value))
-        for vals, da, c, ls in zip(cycle(value), self.iter_data,
-                                   self.id_color.colors, linestyles):
+        for vals, da, fit_type, c, ls in zip(
+                cycle(value), self.iter_data, cycle(safe_list(self.fit.value)),
+                self.id_color.colors, linestyles):
             if da.ndim > 1:
                 da = da[0]
             x = da.to_series().index.values
@@ -557,7 +575,7 @@ class Ci(Formatoption):
 
     def update(self, value):
         def make_fit(x_, y_, **kwargs):
-            return fit_fmt.make_fit(x_, y_, **kwargs)[1]
+            return fit_fmt.make_fit(i, x_, y_, **kwargs)[1]
         self.remove()
         if value is None or self.fit.value is None:
             return

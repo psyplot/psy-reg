@@ -206,6 +206,16 @@ class LinRegPlotterTest(unittest.TestCase):
         da, deg = self.define_poly_data()
         self.plotter = self.plotter_cls(da, fit='poly%i' % deg)
 
+    def test_2fits(self):
+        """Test 2 different fits"""
+        l = self.define_data()
+        l.append(l[0].copy(True), new_name=True)
+        plotter = self.plotter_cls(l, fit=['fit', 'poly1'])
+        self.assertIn('intercept', plotter.plot_data[0].attrs)
+        self.assertNotIn('intercept', plotter.plot_data[1].attrs)
+        self.assertIn('c1', plotter.plot_data[1].attrs)
+        self.assertNotIn('c1', plotter.plot_data[0].attrs)
+
     def test_ideal_nonfixed(self):
         """Test the ideal formatoption"""
         self.test_nonfixed_fit()
@@ -272,6 +282,16 @@ class LinRegPlotterTest(unittest.TestCase):
         self.assertEqual(plot_fmt._plot[-1].get_xdata().min(), vmin)
         self.assertEqual(plot_fmt._plot[-1].get_xdata().max(), vmax)
 
+    def test_line_xlim_2(self):
+        """Test the line_xlim with two arrays"""
+        l = self.define_data()
+        l.append(l[0].copy(True), new_name=True)
+        plotter = self.plotter_cls(l, line_xlim=[(0, 5), (5, 10)])
+        self.assertEqual(plotter.plot_data[0].x.min().values, 0)
+        self.assertEqual(plotter.plot_data[0].x.max().values, 5)
+        self.assertEqual(plotter.plot_data[1].x.min().values, 5)
+        self.assertEqual(plotter.plot_data[1].x.max().values, 10)
+
 
 class SingleLinRegPlotterTest(LinRegPlotterTest):
     """Test the :class:`psyplot.plotter.linreg.LinRegPlotter` with a single
@@ -297,6 +317,14 @@ class SingleLinRegPlotterTest(LinRegPlotterTest):
     @property
     def plot_data(self):
         return self.plotter.plot_data
+
+    @unittest.skip('No need for two arrays')
+    def test_line_xlim_2(self):
+        pass
+
+    @unittest.skip('No need for two arrays')
+    def test_2fits(self):
+        pass
 
 
 class DensityRegPlotterTest(unittest.TestCase):

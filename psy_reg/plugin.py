@@ -7,7 +7,7 @@ from psyplot.config.rcsetup import RcParams
 from psy_simple.plugin import (
     try_and_error, validate_float, validate_none, validate_limits,
     validate_dict, validate_int, validate_cmap, validate_str,
-    ValidateInStrings)
+    ValidateInStrings, safe_list)
 from psy_reg import __version__ as plugin_version
 
 
@@ -57,17 +57,19 @@ def validate_callable(val):
 
 
 def validate_fit(val):
-    if isinstance(val, six.string_types) and val.startswith('poly'):
-        try:
-            int(val[4:])
-        except:
-            raise ValueError("Polynomials must be of the form 'poly<deg>' "
-                             "(e.g. 'poly3'), not %s!" % val)
-        else:
-            return val
-    return try_and_error(
-        validate_callable, validate_none,
-        ValidateInStrings('fit', ['fit', 'robust'], True))(val)
+    def validate(val):
+        if isinstance(val, six.string_types) and val.startswith('poly'):
+            try:
+                int(val[4:])
+            except:
+                raise ValueError("Polynomials must be of the form 'poly<deg>' "
+                                 "(e.g. 'poly3'), not %s!" % val)
+            else:
+                return val
+        return try_and_error(
+            validate_callable, validate_none,
+            ValidateInStrings('fit', ['fit', 'robust'], True))(val)
+    return list(map(validate, safe_list(val)))
 
 
 class validate_list(object):
@@ -178,6 +180,15 @@ def validate_ideal(val):
             "Only 1- and 2-dimensional arrays are allowed! Got %s" % (val, ))
 
 
+def validate_line_xlim(val):
+    if isinstance(val, six.string_types):
+        val = (val, val)
+    val = asarray(safe_list(val))
+    if val.ndim == 1:
+        val = asarray([val])
+    return list(map(validate_limits, val.tolist()))
+
+
 # -----------------------------------------------------------------------------
 # ------------------------------ rcParams -------------------------------------
 # -----------------------------------------------------------------------------
@@ -216,7 +227,7 @@ rcParams = RcParams(defaultParams={
     'plotter.linreg.yrange': [
         'minmax', validate_limits, 'The fit limits of the line plot'],
     'plotter.linreg.line_xlim': [
-        'minmax', validate_limits, 'The x-limits of the drawn best fit line'],
+        'minmax', validate_line_xlim, 'The x-limits of the drawn best fit line'],
     'plotter.linreg.fix': [
         None, validate_fix,
         'fmt key to set a fix point for the linear regression fit'],
