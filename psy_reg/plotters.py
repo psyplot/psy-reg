@@ -309,6 +309,11 @@ class LinearRegressionFit(Formatoption):
         d = dict(zip(args, params))
         if pcov.size == 1:
             d[args[0] + '_err'] = np.sqrt(pcov)[0, 0]
+        # calculate rsquared
+        residuals = y - self.model(x, *params)
+        ss_res = (residuals ** 2).sum()
+        ss_tot = ((y - y.mean()) ** 2).sum()
+        d['rsquared'] = 1 - (ss_res / ss_tot)
         return x_line, self.model(x_line, *params), d, pcov
 
     def _poly_fit(self, x, y, x_line, **kwargs):
@@ -317,6 +322,11 @@ class LinearRegressionFit(Formatoption):
                      params[::-1]))
         if pcov.size == 1:
             d['c0_err'] = np.sqrt(pcov)[0, 0]
+        # calculate rsquared
+        residuals = y - np.poly1d(params)(x)
+        ss_res = (residuals ** 2).sum()
+        ss_tot = ((y - y.mean()) ** 2).sum()
+        d['rsquared'] = 1 - (ss_res / ss_tot)
         return x_line, np.poly1d(params)(x_line), d, pcov
 
     def _statsmodel_fit(self, x, y, x_line, fix=None):
