@@ -173,9 +173,9 @@ def validate_ideal(val):
     except ValueError:
         val = asarray(val).astype(float)
         if val.ndim == 1:
-            return val.reshape(1, val.size)
+            return val.reshape(1, val.size).tolist()
         elif val.ndim == 2:
-            return val
+            return val.tolist()
         raise ValueError(
             "Only 1- and 2-dimensional arrays are allowed! Got %s" % (val, ))
 
