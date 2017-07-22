@@ -238,7 +238,8 @@ class InitialParameters(Formatoption):
         args = self.fit.func_args
         bounds = self.param_bounds.bounds[i]
         if bounds is None or np.isinf(bounds).any():
-            warn("Need finite parameter boundaries for automatic estimation!",
+            warn(("[%s] - Need finite parameter boundaries for automatic "
+                  "estimation!") % (self.logger.name, ),
                  RuntimeWarning)
             return None
         if np.ndim(bounds) == 1:
@@ -255,8 +256,8 @@ class InitialParameters(Formatoption):
         if result.success:
             return result.x
         else:  # return default values
-            warn('Could not estimate initial parameters! Reason: ' +
-                 result.message, RuntimeWarning)
+            warn('[%s] - Could not estimate initial parameters! Reason: %s' % (
+                    self.logger.name, result.message), RuntimeWarning)
             return None
 
 
