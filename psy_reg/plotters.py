@@ -7,6 +7,7 @@ to fit a linear model to the data and visualize it."""
 from __future__ import division
 import six
 import inspect
+from warnings import warn
 from functools import partial
 from itertools import islice, cycle, repeat
 import numpy as np
@@ -157,6 +158,108 @@ class XLineRange(XFitRange):
     xrange"""
 
 
+class ParameterBounds(Formatoption):
+    """
+    Parameter bounds for the function parameters
+
+    This formatoption can be used to specify the boundaries for the
+    parameters. It only has an effect if the value of the :attr:`fit`
+    formatoption is a callable function.
+
+    These bounds will also be used by the :attr:`p0` formatoption to
+    estimate the initial parameters.
+
+    Possible types
+    --------------
+    None
+        Use open boundaries
+    list of tuples with length 2
+        The boundaries for each of the parameters
+    list of tuples or None
+        A combination of the above types where each corresponds to one
+        data array
+    """
+
+    def update(self, value):
+        self.bounds = [v for da, v in zip(self.iter_raw_data,
+                                          cycle(value))]
+
+
+class InitialParameters(Formatoption):
+    """
+    Initial parameters for the :func:`scipy.optimize.curve_fit` function
+
+    This formatoptions can be used to set the initial parameters if the
+    value of the :attr:`fit` formatoption is a callable function.
+
+    Note that the automatic estimation uses the boundaries of the
+    :attr:`param_bounds` formatoption. This only works if the boundaries are
+    given for each parameter and finite.
+
+    Possible types
+    --------------
+    'auto'
+        The initial parameters are estimated automatically using the
+        :func:`from scipy.optimize.differential_evolution` function
+    list of floats
+        The initial parameters
+    list of list of floats or 'auto'
+        A combination of the above types where each corresponds to one
+        data array
+    """
+
+    priority = START
+
+    name = 'Initial parameter values for the fit'
+
+    group = 'regression'
+
+    data_dependent = True
+
+    dependencies = ['param_bounds']
+
+    connections = ['fit']
+
+    def update(self, value):
+        # the parameters are set via the :attr:`p0` property
+        pass
+
+    def p0(self, i=None):
+        if self.index_in_list is not None or i is None:
+            i = 0
+        val = next(islice(cycle(safe_list(self.value)), i, i+1))
+        if isinstance(val, six.string_types) and val == 'auto':
+            return self._estimate_p0(i)
+        return val
+
+    def _estimate_p0(self, i):
+        from scipy.optimize import differential_evolution
+        func = self.fit.model
+        args = self.fit.func_args
+        bounds = self.param_bounds.bounds[i]
+        if bounds is None:
+            warn("Need the parameter boundaries for automatic estimation!",
+                 RuntimeWarning)
+            return None
+        if np.ndim(bounds) == 1:
+            bounds = [bounds]
+        bounds = [t for t, arg in zip(cycle(bounds), args)]
+        da = next(islice(self.iter_raw_data, i, i+1))
+        x, xname, y, yname = self.fit.get_xy(i, da)
+
+        def objective(params):
+            # the sum of squared errors
+            return np.sum((y - func(x, *params)) ** 2)
+
+        result = differential_evolution(objective, bounds)
+        if result.success:
+            return result.x
+        else:  # return default values
+            warn('Could not estimate initial parameters! Reason: ' +
+                 result.message, RuntimeWarning)
+            return None
+
+
 class LinearRegressionFit(Formatoption):
     """
     Choose the linear fitting method
@@ -192,7 +295,7 @@ class LinearRegressionFit(Formatoption):
     """
 
     dependencies = ['transpose', 'fix', 'xrange', 'yrange', 'coord',
-                    'line_xlim']
+                    'line_xlim', 'p0']
 
     priority = START
 
@@ -201,6 +304,15 @@ class LinearRegressionFit(Formatoption):
     data_dependent = True
 
     group = 'regression'
+
+    @property
+    def func_args(self):
+        """The arguments for the fit function if the :attr:`method` is
+        'curve_fit'"""
+        if six.PY2:
+            return inspect.getargspec(self.model).args[1:]
+        else:
+            return list(inspect.signature(self.model).parameters.keys())[1:]
 
     def __init__(self, *args, **kwargs):
         super(LinearRegressionFit, self).__init__(*args, **kwargs)
@@ -296,16 +408,14 @@ class LinearRegressionFit(Formatoption):
         elif self.method == 'poly':
             return self._poly_fit(x, y, x_line, **kwargs)
         else:
+            kwargs['p0'] = self.p0.p0(i)
             return self._scipy_curve_fit(x, y, x_line, **kwargs)
 
     def _scipy_curve_fit(self, x, y, x_line, **kwargs):
         from scipy.optimize import curve_fit
         kwargs.pop('fix', None)
         params, pcov = curve_fit(self.model, x, y, **kwargs)
-        if six.PY2:
-            args = inspect.getargspec(self.model).args[1:]
-        else:
-            args = list(inspect.signature(self.model).parameters.keys())[1:]
+        args = self.func_args
         d = dict(zip(args, params))
         if pcov.size == 1:
             d[args[0] + '_err'] = np.sqrt(pcov)[0, 0]
@@ -642,6 +752,8 @@ class LinRegPlotter(psyps.LinePlotter):
     xrange = XFitRange('xrange')
     yrange = YFitRange('yrange')
     line_xlim = XLineRange('line_xlim')
+    param_bounds = ParameterBounds('param_bounds')
+    p0 = InitialParameters('p0')
     fit = LinearRegressionFit('fit')
     fix = FixPoint('fix')
     nboot = NBoot('nboot')
@@ -674,6 +786,8 @@ class DensityRegPlotter(psyps.ScalarCombinedBase, psyps.DensityPlotter,
     density = FitPointDensity('density', index_in_list=0)
 
     # line plot formatoptions
+    param_bounds = ParameterBounds('param_bounds', index_in_list=1)
+    p0 = InitialParameters('p0', index_in_list=1)
     fit = LinearRegressionFit('fit', index_in_list=1)
     fix = FixPoint('fix', index_in_list=1)
     nboot = NBoot('nboot', index_in_list=1)

@@ -1,10 +1,25 @@
 # -*- coding: utf-8 -*-
+import sys
+import subprocess as spr
+import six
 import unittest
 import numpy as np
 import xarray as xr
 import matplotlib.pyplot as plt
 import psyplot.data as psyd
 from psy_reg.plotters import LinRegPlotter, DensityRegPlotter
+
+
+# check if the seaborn version is smaller than 0.8 (without actually importing
+# it), due to https://github.com/mwaskom/seaborn/issues/966
+# If so, disable the import of it when import psyplot.project
+try:
+    sns_version = spr.check_output(
+        [sys.executable, '-c', 'import seaborn; print(seaborn.__version__)'])
+except spr.CalledProcessError:  # seaborn is not installed
+    sns_version = None
+else:
+    sns_version = sns_version.decode('utf-8')
 
 
 class LinRegPlotterTest(unittest.TestCase):
@@ -196,10 +211,21 @@ class LinRegPlotterTest(unittest.TestCase):
 
     def test_curve_fit(self):
         """Testing the fit of a polynom"""
-        da, func = self.define_curve_data()
-        self.plotter = plotter = self.plotter_cls(da, fit=func)
-        err = np.sqrt(plotter.fit.fits[0][0, 0])
-        self.assertLess(err, 0.01)
+        def test():
+            da, func = self.define_curve_data()
+            self.plotter = plotter = self.plotter_cls(da, fit=func)
+            err = np.sqrt(plotter.fit.fits[0][0, 0])
+            self.assertLess(err, 0.01)
+
+        if not six.PY2 and sns_version >= '0.8':
+            # Test whether the warning is raised that the boundaries have
+            # to be specified
+            with self.assertWarnsRegex(RuntimeWarning, 'boundaries'):
+                test()
+        else:
+            test()
+        self.plotter.update(param_bounds=[-1, 2])
+        self.assertIsNotNone(self.plotter.p0.p0())
 
     def test_poly(self):
         """Testing the fit of a polynom"""

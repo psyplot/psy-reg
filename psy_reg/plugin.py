@@ -7,7 +7,7 @@ from psyplot.config.rcsetup import RcParams
 from psy_simple.plugin import (
     try_and_error, validate_float, validate_none, validate_limits,
     validate_dict, validate_int, validate_cmap, validate_str,
-    ValidateInStrings, safe_list)
+    ValidateInStrings, safe_list, validate_nseq_float)
 from psy_reg import __version__ as plugin_version
 
 
@@ -180,6 +180,32 @@ def validate_ideal(val):
             "Only 1- and 2-dimensional arrays are allowed! Got %s" % (val, ))
 
 
+def validate_param_bounds(value):
+    if value is None:
+        return [None]
+    else:
+        f = value[0]
+        try:
+            f = next(filter(lambda v: v is not None, value))
+        except StopIteration:
+            return value
+        else:
+            try:
+                f[0]
+            except TypeError:  # found only one tuple
+                return [value]
+            else:
+                return value
+
+
+def validate_p0(value):
+    value = safe_list(value)
+    for i, v in enumerate(value):
+        value[i] = try_and_error(validate_nseq_float(),
+                                 ValidateInStrings('p0', ['auto'], True))(v)
+    return value
+
+
 def validate_line_xlim(val):
     if isinstance(val, six.string_types):
         val = (val, val)
@@ -227,7 +253,14 @@ rcParams = RcParams(defaultParams={
     'plotter.linreg.yrange': [
         'minmax', validate_limits, 'The fit limits of the line plot'],
     'plotter.linreg.line_xlim': [
-        'minmax', validate_line_xlim, 'The x-limits of the drawn best fit line'],
+        'minmax', validate_line_xlim,
+        'The x-limits of the drawn best fit line'],
+    'plotter.linreg.param_bounds': [
+        None, validate_param_bounds,
+        'fmt key to specify the boundaries of the fit'],
+    'plotter.linreg.p0': [
+        'auto', validate_p0,
+        'fmt key to specify the initial parameters of the fit'],
     'plotter.linreg.fix': [
         None, validate_fix,
         'fmt key to set a fix point for the linear regression fit'],
