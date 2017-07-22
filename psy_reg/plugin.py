@@ -8,6 +8,7 @@ from psy_simple.plugin import (
     try_and_error, validate_float, validate_none, validate_limits,
     validate_dict, validate_int, validate_cmap, validate_str,
     ValidateInStrings, safe_list, validate_nseq_float)
+from psyplot.compat.pycompat import map, filter
 from psy_reg import __version__ as plugin_version
 
 
@@ -186,7 +187,7 @@ def validate_param_bounds(value):
     else:
         f = value[0]
         try:
-            f = next(filter(lambda v: v is not None, value))
+            f = next(filter(lambda v: v is not None, validate_iter(value)))
         except StopIteration:
             return value
         else:
