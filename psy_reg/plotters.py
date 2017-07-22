@@ -237,8 +237,8 @@ class InitialParameters(Formatoption):
         func = self.fit.model
         args = self.fit.func_args
         bounds = self.param_bounds.bounds[i]
-        if bounds is None:
-            warn("Need the parameter boundaries for automatic estimation!",
+        if bounds is None or np.isinf(bounds).any():
+            warn("Need finite parameter boundaries for automatic estimation!",
                  RuntimeWarning)
             return None
         if np.ndim(bounds) == 1:
@@ -295,7 +295,7 @@ class LinearRegressionFit(Formatoption):
     """
 
     dependencies = ['transpose', 'fix', 'xrange', 'yrange', 'coord',
-                    'line_xlim', 'p0']
+                    'line_xlim', 'p0', 'param_bounds']
 
     priority = START
 
@@ -409,6 +409,7 @@ class LinearRegressionFit(Formatoption):
             return self._poly_fit(x, y, x_line, **kwargs)
         else:
             kwargs['p0'] = self.p0.p0(i)
+            kwargs['bounds'] = self.param_bounds.bounds[i] or (-np.inf, np.inf)
             return self._scipy_curve_fit(x, y, x_line, **kwargs)
 
     def _scipy_curve_fit(self, x, y, x_line, **kwargs):
