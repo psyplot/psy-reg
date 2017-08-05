@@ -15,7 +15,7 @@ We highly recommend to use conda_ for installing psy-reg.
 After downloading the installer from anaconda_, you can install psy-reg simply
 via::
 
-    $ conda install -c chilipp psy-reg
+    $ conda install -c conda-forge psy-reg
 
 .. _anaconda: https://www.continuum.io/downloads
 .. _conda-forge: http://conda-forge.github.io/

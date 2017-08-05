@@ -60,9 +60,9 @@ See the :ref:`plot_methods` and :ref:`gallery_examples` for more information.
         :alt: PyPI Package latest release
         :target: https://pypi.python.org/pypi/psy-reg
 
-    .. |conda| image:: https://anaconda.org/chilipp/psy-reg/badges/installer/conda.svg
+    .. |conda| image:: https://anaconda.org/conda-forge/psy-reg/badges/version.svg
         :alt: conda
-        :target: https://conda.anaconda.org/chilipp
+        :target: https://conda.anaconda.org/conda-forge/psy-reg
 
     .. |supported-versions| image:: https://img.shields.io/pypi/pyversions/psy-reg.svg?style=flat
         :alt: Supported versions
