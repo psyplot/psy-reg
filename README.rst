@@ -13,7 +13,7 @@ psy-reg: Psyplot plugin for visualizing and calculating regression plots
     * - tests
       - |travis| |appveyor| |requires| |coveralls|
     * - package
-      - |version| |conda| |supported-versions| |supported-implementations|
+      - |version| |conda| |supported-versions| |supported-implementations| |zenodo|
 
 .. |docs| image:: http://readthedocs.org/projects/psy-reg/badge/?version=latest
     :alt: Documentation Status
@@ -50,6 +50,10 @@ psy-reg: Psyplot plugin for visualizing and calculating regression plots
 .. |supported-implementations| image:: https://img.shields.io/pypi/implementation/psy-reg.svg?style=flat
     :alt: Supported implementations
     :target: https://pypi.python.org/pypi/psy-reg
+
+.. |zenodo| image:: https://zenodo.org/badge/83479056.svg
+    :alt: Zenodo
+    :target: https://zenodo.org/badge/latestdoi/83479056
 
 
 .. end-badges
