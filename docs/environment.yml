@@ -1,9 +1,9 @@
 name: psyplot_docs
 channels:
+    - chilipp/label/dev
     - conda-forge
-    - chilipp
 dependencies:
-    - python=3.5
+    - python=3.6
     - dask
     - xarray
     - netCDF4
@@ -14,9 +14,8 @@ dependencies:
     - jupyter_client
     - ipykernel
     - sphinx
-    - cartopy
     - psyplot
-    - psy-simple
+    - psy-simple>1.0.1
     - pip:
         - autodocsumm
         - sphinx-nbexamples
