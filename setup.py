@@ -57,7 +57,7 @@ setup(name='psy-reg',
       packages=find_packages(exclude=['docs', 'tests*', 'examples']),
       install_requires=[
           'psyplot',
-          'psy-simple',
+          'psy-simple>1.0.1',
           'statsmodels',
           'scipy',
       ],
