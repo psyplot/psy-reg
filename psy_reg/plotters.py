@@ -553,7 +553,10 @@ class IdealLine(Formatoption):
                 self.id_color.colors, linestyles):
             if da.ndim > 1:
                 da = da[0]
-            x = da.to_series().index.values
+            try:
+                x = psyps._get_index_vals(da.to_series().index)
+            except AttributeError:  # old psy-simple version
+                x = da.to_series().index
             if fit_type in ['robust', 'fit']:
                 y = vals[0] + vals[1] * x
             else:
