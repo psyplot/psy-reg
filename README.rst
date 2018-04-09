@@ -41,7 +41,7 @@ psy-reg: Psyplot plugin for visualizing and calculating regression plots
 
 .. |conda| image:: https://anaconda.org/conda-forge/psy-reg/badges/version.svg
     :alt: conda
-    :target: https://conda.anaconda.org/conda-forge/psy-reg
+    :target: https://anaconda.org/conda-forge/psy-reg
 
 .. |supported-versions| image:: https://img.shields.io/pypi/pyversions/psy-reg.svg?style=flat
     :alt: Supported versions
