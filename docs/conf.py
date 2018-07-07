@@ -66,7 +66,8 @@ templates_path = ['_templates']
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 # boolean controlling wether to calculate the examples or not
-process_examples = True
+process_examples = (
+    not osp.exists(osp.join(osp.dirname(__file__), 'examples')) or on_rtd)
 
 if on_rtd:
     spr.call([sys.executable] +
