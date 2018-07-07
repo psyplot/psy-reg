@@ -7,7 +7,8 @@ from psyplot.config.rcsetup import RcParams
 from psy_simple.plugin import (
     try_and_error, validate_float, validate_none, validate_limits,
     validate_dict, validate_int, validate_cmap, validate_str,
-    ValidateInStrings, safe_list, validate_nseq_float)
+    ValidateInStrings, safe_list, validate_nseq_float,
+    rcParams as psyps_rc)
 from psyplot.compat.pycompat import map, filter
 from psy_reg import __version__ as plugin_version
 
@@ -274,7 +275,7 @@ rcParams = RcParams(defaultParams={
         95, try_and_error(validate_none, validate_float),
         'Size of the confidence interval'],
     'plotter.linreg.id_color': [
-        None, try_and_error(validate_none, validate_cmap, validate_iter),
+        None, psyps_rc.validate['plotter.simple.color'],
         'fmt key to modify the color cycle of the ideal lines in a fit plot'],
     'plotter.linreg.ideal': [
         None, validate_ideal,
