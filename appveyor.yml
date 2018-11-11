@@ -4,8 +4,9 @@ environment:
   PYTHON: "C:\\Python36-conda64"
 
   matrix:
-    - PYTHON_VERSION: "3.5"
+    - PYTHON_VERSION: "3.7"
     - PYTHON_VERSION: "3.6"
+    - PYTHON_VERSION: "3.5"
 install:
   # Install miniconda Python
   - "powershell ./ci/install_python.ps1"

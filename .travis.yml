@@ -1,7 +1,13 @@
 language: generic
+env:
+    global:
+        - secure: "GKZ+sjlIXDiclzPOw9RO7/xzl9PTZd9DpXC9uTMrJwLOThwl8kQJwMOLyeoOpdAS3/TEhGLDYRG4QPl9uPN7QEdE/GV0q1DImZRXzP6zTLxz0zX3P4YJ4pOoUJBHXdzEocNfI+Ajt2SLWw3L2BEa7KXU2i2EkaknaHd6m5X/ISOyqaklrr9HFQEvfV9d98vEa0U0Pn29gG2jf+q5uDrkL+vsoc5O7ic/AFupTQFRShcfgo9qKADFOr+UQ2M5iW7nec7L09/kJ0yABk+CRNienjZzivFtbDaTUlHPhfjNheO9GDgb/+jsj7ruyc4Xi0+fAMdGQbD/3G34c88X17ApzzHpqA0XGf70H/drgb6mnU+HaDWBmJo+QbRqJBjzP6Aq0so5fQs0rm8DvjjZDRn1hP7YO/eh3F20QE/iDiBORoXia1JnaQGpmR4lADQ72tFZ99zJkKUSiyBhKW/WCVTOhHa7167P2d5RrtwHF0w0Q40U+/g/jHt9WJP5wNg0ycnUCjxaIOlQFk2jmqIRmXCKjVDjIim22AgIah9eW+dtR40MggvwW/gpEldI6kvho9xfyr/FSNnuG9WSmlBglZbUWKT16jQJMd3XMSVGbYiKN2+uPTA6Oe/o7Mxp1Td/eAYZZC4t9f4sk3BuodEUWJ39tadJi2qMY6aV1omgcpoa2QU="
 matrix:
     include:
         # linux environments
+        - env:
+            - PYTHON_VERSION=3.7
+          os: linux
         - env:
             - PYTHON_VERSION=3.6
           os: linux
@@ -12,6 +18,9 @@ matrix:
             - PYTHON_VERSION=2.7
           os: linux
         # osx environments
+        - env:
+            - PYTHON_VERSION=3.7
+          os: osx
         - env:
             - PYTHON_VERSION=3.6
           os: osx
@@ -41,6 +50,8 @@ install:
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
+  # install conda build and anaconda-client for deploy
+  - conda install conda-build anaconda-client
   # Useful for debugging any issues with conda
   - conda info -a
   - 'ENVKEY=py"${PYTHON_VERSION}"'
@@ -61,10 +72,21 @@ install:
   - conda env export -n psyplot_$ENVKEY
   # print versions of all the important requirements
   - psyplot -aV
+  # add conda-forge channel for build
+  - conda config --add channels chilipp/label/$TRAVIS_BRANCH
+  - conda config --add channels conda-forge
 
 script:
   # run the tests
   - coverage run -a --source=psy_reg setup.py test -a "-v"
+  - conda build ci/conda-recipe --python $PYTHON_VERSION --no-test
 
 after_success:
   - coveralls
+
+deploy:
+  - provider: script
+    script: ci/deploy_anaconda.sh
+    skip_cleanup: true
+    on:
+      all_branches: true

@@ -1,0 +1,14 @@
+name: psyplot_py3.7
+channels:
+    - conda-forge
+dependencies:
+    - python=3.7
+    - matplotlib
+    - dask
+    - xarray
+    - netCDF4
+    - seaborn
+    - scipy
+    - statsmodels
+    - pip:
+        - pytest
