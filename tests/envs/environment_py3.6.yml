@@ -10,5 +10,6 @@ dependencies:
     - seaborn
     - scipy
     - statsmodels
+    - pyqt           # [osx]
     - pip:
         - pytest
