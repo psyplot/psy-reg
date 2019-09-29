@@ -63,14 +63,14 @@ def validate_fit(val):
         if isinstance(val, six.string_types) and val.startswith('poly'):
             try:
                 int(val[4:])
-            except:
+            except ValueError:
                 raise ValueError("Polynomials must be of the form 'poly<deg>' "
                                  "(e.g. 'poly3'), not %s!" % val)
             else:
                 return val
         return try_and_error(
             validate_callable, validate_none,
-            ValidateInStrings('fit', ['fit', 'robust'], True))(val)
+            ValidateInStrings('fit', ['fit', 'linear', 'robust'], True))(val)
     return list(map(validate, safe_list(val)))
 
 
