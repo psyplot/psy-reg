@@ -1,5 +1,10 @@
+"""Utility functions for psy-reg"""
 import abc
+import inspect
+from itertools import cycle
 from scipy.optimize import curve_fit, differential_evolution
+import numpy as np
+from warnings import warn
 
 
 def rsquared(sim, obs):
