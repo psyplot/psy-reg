@@ -64,6 +64,7 @@ install:
   # use the branch from psy-simple
   - git clone "https://github.com/Chilipp/psy-simple.git" -b $TRAVIS_BRANCH || git clone "https://github.com/Chilipp/psy-simple.git"
   - cd psy-simple && python setup.py install && cd .. && rm -rf psy-simple
+  - if [[ $TRAVIS_TAG == "" ]]; then export GIT_BRANCH=$TRAVIS_BRANCH; fi
   # install coveralls
   - pip install coveralls
   # install psyplot
@@ -78,20 +79,13 @@ install:
 
 script:
   # run the tests
-  - coverage run -a --source=psy_reg setup.py test -a "-v"
-  - conda build ci/conda-recipe --python $PYTHON_VERSION --no-test
+  - coverage run --source=psy_reg setup.py test -a "-v"
+  - conda build ci/conda-recipe --python $PYTHON_VERSION
+  # deploy here (don't use travis deploy because it requires homebrew)
+  - if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "Chilipp/psy-reg" && $DEPLOY_CONDA == "true" ]]; then
+        conda activate base;
+        ci/deploy_anaconda.py;
+    fi
 
 after_success:
   - coveralls
-
-deploy:
-  - provider: script
-    script: ci/deploy_anaconda.sh
-    skip_cleanup: true
-    on:
-      all_branches: true
-  - provider: script
-    script: ci/deploy_anaconda.sh
-    skip_cleanup: true
-    on:
-      tags: true
