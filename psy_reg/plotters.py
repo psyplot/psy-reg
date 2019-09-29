@@ -7,7 +7,6 @@ to fit a linear model to the data and visualize it."""
 from __future__ import division
 import six
 import inspect
-from warnings import warn
 from functools import partial
 from itertools import islice, cycle, repeat
 import numpy as np
@@ -21,6 +20,7 @@ from psyplot.data import InteractiveList, safe_list, CFDecoder
 from psyplot.plotter import Formatoption, START, Plotter, END
 import psy_simple.plotters as psyps
 import psy_simple.base as psypb
+from psy_reg.utils import GenericModel
 
 
 class LinRegTranspose(psyps.Transpose):
@@ -233,32 +233,12 @@ class InitialParameters(Formatoption):
         return val
 
     def _estimate_p0(self, i):
-        from scipy.optimize import differential_evolution
-        func = self.fit.model
-        args = self.fit.func_args
+        model = self.fit.model
         bounds = self.param_bounds.bounds[i]
-        if bounds is None or np.isinf(bounds).any():
-            warn(("[%s] - Need finite parameter boundaries for automatic "
-                  "estimation!") % (self.logger.name, ),
-                 RuntimeWarning)
-            return None
-        if np.ndim(bounds) == 1:
-            bounds = [bounds]
-        bounds = [t for t, arg in zip(cycle(bounds), args)]
         da = next(islice(self.iter_raw_data, i, i+1))
         x, xname, y, yname = self.fit.get_xy(i, da)
 
-        def objective(params):
-            # the sum of squared errors
-            return np.sum((y - func(x, *params)) ** 2)
-
-        result = differential_evolution(objective, bounds)
-        if result.success:
-            return result.x
-        else:  # return default values
-            warn('[%s] - Could not estimate initial parameters! Reason: %s' % (
-                    self.logger.name, result.message), RuntimeWarning)
-            return None
+        return model.estimate_p0(x, y, bounds)
 
 
 class LinearRegressionFit(Formatoption):
@@ -269,7 +249,7 @@ class LinearRegressionFit(Formatoption):
 
     Possible types
     --------------
-    'fit'
+    'fit' or 'linear'
         make a linear fit
     'robust'
         make a robust linear fit
@@ -351,8 +331,16 @@ class LinearRegressionFit(Formatoption):
 
     def set_method(self, i):
         value = next(islice(cycle(safe_list(self.value)), i, i+1))
-        if callable(value):
-            self.model = value
+        if value is None:
+            self.model = None
+            self.method = None
+        elif callable(value):
+
+            class Model(GenericModel):
+
+                function = staticmethod(value)
+
+            self.model = Model
             self.method = 'curve_fit'
         elif value.lower().startswith('poly'):
             self.model = partial(np.polyfit, deg=int(value[4:]), cov=True)
@@ -404,7 +392,9 @@ class LinearRegressionFit(Formatoption):
 
     def make_fit(self, i, x, y, x_line=None, **kwargs):
         self.set_method(i)
-        if self.method == 'statsmodels':
+        if self.method is None:
+            return x, y, {}, None
+        elif self.method == 'statsmodels':
             return self._statsmodel_fit(x, y, x_line, **kwargs)
         elif self.method == 'poly':
             return self._poly_fit(x, y, x_line, **kwargs)
@@ -414,19 +404,9 @@ class LinearRegressionFit(Formatoption):
             return self._scipy_curve_fit(x, y, x_line, **kwargs)
 
     def _scipy_curve_fit(self, x, y, x_line, **kwargs):
-        from scipy.optimize import curve_fit
         kwargs.pop('fix', None)
-        params, pcov = curve_fit(self.model, x, y, **kwargs)
-        args = self.func_args
-        d = dict(zip(args, params))
-        if pcov.size == 1:
-            d[args[0] + '_err'] = np.sqrt(pcov)[0, 0]
-        # calculate rsquared
-        residuals = y - self.model(x, *params)
-        ss_res = (residuals ** 2).sum()
-        ss_tot = ((y - y.mean()) ** 2).sum()
-        d['rsquared'] = 1 - (ss_res / ss_tot)
-        return x_line, self.model(x_line, *params), d, pcov
+        fit = self.model.fit(x, y, **kwargs)
+        return x_line, fit.predict(x_line), fit.attrs, fit
 
     def _poly_fit(self, x, y, x_line, **kwargs):
         params, pcov = self.model(x, y)
@@ -708,6 +688,8 @@ class Ci(Formatoption):
         nboot = self.nboot.value
         for i, (da, da_fit) in enumerate(zip(self.iter_raw_data,
                                              self.iter_data)):
+            if fit_fmt.fits[i] is None:
+                continue
             x, xname, y, yname = fit_fmt.get_xy(i, da)
             coord = da_fit.coords[da_fit.dims[0]]
             x_line = coord.values

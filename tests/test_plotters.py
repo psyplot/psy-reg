@@ -214,7 +214,7 @@ class LinRegPlotterTest(unittest.TestCase):
         def test():
             da, func = self.define_curve_data()
             self.plotter = plotter = self.plotter_cls(da, fit=func)
-            err = np.sqrt(plotter.fit.fits[0][0, 0])
+            err = np.sqrt(plotter.fit.fits[0].pcov[0, 0])
             self.assertLess(err, 0.01)
 
         if not six.PY2 and sns_version >= '0.8':
