@@ -68,6 +68,8 @@ def validate_fit(val):
                                  "(e.g. 'poly3'), not %s!" % val)
             else:
                 return val
+        elif hasattr(val, 'fit') and hasattr(val, 'predict'):
+            return val
         return try_and_error(
             validate_callable, validate_none,
             ValidateInStrings('fit', ['fit', 'linear', 'robust'], True))(val)

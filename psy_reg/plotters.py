@@ -258,6 +258,9 @@ class LinearRegressionFit(Formatoption):
     function
         A callable function that takes an x-array and a y-array as input and
         can be used for the :func:`scipy.optimize.curve_fit` function
+    any object with a `fit` and `predict` method
+        A model that with a fit signature such as
+        ``model.fit(x, y).predict(x)``
     None
         make no fit
 
@@ -334,6 +337,12 @@ class LinearRegressionFit(Formatoption):
         if value is None:
             self.model = None
             self.method = None
+        elif isinstance(value, type) and issubclass(value, GenericModel):
+            self.model = value
+            self.method = 'curve_fit'
+        elif hasattr(value, 'fit'):
+            self.model = value
+            self.method = 'generic'
         elif callable(value):
 
             class Model(GenericModel):
@@ -398,15 +407,21 @@ class LinearRegressionFit(Formatoption):
             return self._statsmodel_fit(x, y, x_line, **kwargs)
         elif self.method == 'poly':
             return self._poly_fit(x, y, x_line, **kwargs)
-        else:
+        elif self.method == 'curve_fit':
             kwargs['p0'] = self.p0.p0(i)
             kwargs['bounds'] = self.param_bounds.bounds[i] or (-np.inf, np.inf)
             return self._scipy_curve_fit(x, y, x_line, **kwargs)
+        else:
+            return self._generic_fit(x, y, x_line, **kwargs)
+
+    def _generic_fit(self, x, y, x_line, **kwargs):
+        fit = self.model.fit(x, y)
+        return x_line, fit.predict(x_line), getattr(fit, 'attrs', {}), fit
 
     def _scipy_curve_fit(self, x, y, x_line, **kwargs):
         kwargs.pop('fix', None)
         fit = self.model.fit(x, y, **kwargs)
-        return x_line, fit.predict(x_line), fit.attrs, fit
+        return x_line, fit.predict(x_line), getattr(fit, 'attrs', {}), fit
 
     def _poly_fit(self, x, y, x_line, **kwargs):
         params, pcov = self.model(x, y)
