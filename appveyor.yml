@@ -25,7 +25,7 @@ install:
     - cmd: 'SET PYTHONWARNINGS=ignore:mode:DeprecationWarning:docutils.io:245'
     - cmd: "IF NOT DEFINED APPVEYOR_REPO_TAG_NAME (SET GIT_BRANCH=%APPVEYOR_REPO_BRANCH%)"
     - cmd: "IF NOT DEFINED APPVEYOR_REPO_TAG_NAME (conda config --add channels chilipp/label/%APPVEYOR_REPO_BRANCH%)"
-    - cmd: python ci\\setup_append.py ci\\conda-recipe xarray=%XARRAY_VERSION%
+    - cmd: python ci\\setup_append.py ci\\conda-recipe
 
 build: off
 
