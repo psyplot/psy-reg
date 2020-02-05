@@ -1,81 +1,111 @@
 language: generic
+
 env:
+    matrix:
+        # python 3.8
+        - PYTHON_VERSION=3.8 DEPLOY_CONDA=true
+        - PYTHON_VERSION=3.8 USE_PIP=true
+        # python 3.7
+        - PYTHON_VERSION=3.7 DEPLOY_CONDA=true
     global:
-        - secure: "GKZ+sjlIXDiclzPOw9RO7/xzl9PTZd9DpXC9uTMrJwLOThwl8kQJwMOLyeoOpdAS3/TEhGLDYRG4QPl9uPN7QEdE/GV0q1DImZRXzP6zTLxz0zX3P4YJ4pOoUJBHXdzEocNfI+Ajt2SLWw3L2BEa7KXU2i2EkaknaHd6m5X/ISOyqaklrr9HFQEvfV9d98vEa0U0Pn29gG2jf+q5uDrkL+vsoc5O7ic/AFupTQFRShcfgo9qKADFOr+UQ2M5iW7nec7L09/kJ0yABk+CRNienjZzivFtbDaTUlHPhfjNheO9GDgb/+jsj7ruyc4Xi0+fAMdGQbD/3G34c88X17ApzzHpqA0XGf70H/drgb6mnU+HaDWBmJo+QbRqJBjzP6Aq0so5fQs0rm8DvjjZDRn1hP7YO/eh3F20QE/iDiBORoXia1JnaQGpmR4lADQ72tFZ99zJkKUSiyBhKW/WCVTOhHa7167P2d5RrtwHF0w0Q40U+/g/jHt9WJP5wNg0ycnUCjxaIOlQFk2jmqIRmXCKjVDjIim22AgIah9eW+dtR40MggvwW/gpEldI6kvho9xfyr/FSNnuG9WSmlBglZbUWKT16jQJMd3XMSVGbYiKN2+uPTA6Oe/o7Mxp1Td/eAYZZC4t9f4sk3BuodEUWJ39tadJi2qMY6aV1omgcpoa2QU="
+        - secure: "b+zPZDRvMUfT3mLoIf9xDOO79OkvoE1552Z0a2OxBDbpLcNCODzwhGly7B13p+uLzCgsJqo7ceTdWf4jJfdxYWUK3KINULUrFRBjE55PXZCUeWHvZrm0Tt522TsGekxn7U3DFmVW+OSCRCiyWL7r7OBIOFgscFusGP6GBtSvArTdUmuQOTGwMrEBweR2rqpo+xA1NPAev+oWt+Alxa6u+moALLrGnYXXWaZ94HFCj2OEodKe1LJ3MpwKDVrrHhR8Rxqy/4Ts+n44cGhfcu6oMTrxnLPQrZv/QMK5343iC1sKrCempVBB6Pr0GE/nbDAuxmchdoDc0kOaabEiAvBKCIH+y/8Q2WVhFJSxmDYqUpQqvkK8rjW2gFc72oC9C5aUaG6mWxmPOvhynSUppRIumvmTFs+SB0/4TqZefLe6V72C29/NGNN1xLhQMvp2QlYqF7DKoNtB0UKuF6TmdCN8KrkiCoM66bXSsNt7ueCOnD/Fq5uJE6cCTGbg3qx6psXulkmvFZcAyrdmF10Qol6eoMrnnOxjOw0elDhWa8yW+wSOKJUG6Fn2QKmTSEL5dV07z/vzAoy6yCFYPwROk8LvdUN/8c4uni4Odck+OLT8eqHUeoQyJdc9wCxvJ1BFIE6gflTOFQM54uu80kh+njLOYggM6hjKlAeqSIE47gjJ5EM="
+
+os:
+    - linux
+    - osx
+
+services:
+    - xvfb
+
 matrix:
-    include:
-        # linux environments
-        - env:
-            - PYTHON_VERSION=3.7
-          os: linux
-        - env:
-            - PYTHON_VERSION=3.6
-          os: linux
-        - env:
-            - PYTHON_VERSION=3.5
-          os: linux
-        # osx environments
-        - env:
-            - PYTHON_VERSION=3.7
-          os: osx
-        - env:
-            - PYTHON_VERSION=3.6
-          os: osx
+    allow_failures:
+        - env: PYTHON_VERSION=3.8 USE_PIP=true
+
+before_install:
+    - if [[ "$TRAVIS_EVENT_TYPE" == "cron" ]]; then export DEPLOY_CONDA=false; fi
+    # Remove homebrew.
+    - |
+      if [[ $TRAVIS_OS_NAME == "osx" ]]; then
+          echo ""
+          echo "Removing homebrew from Travis CI to avoid conflicts."
+          curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall > ~/uninstall_homebrew
+          chmod +x ~/uninstall_homebrew
+          ~/uninstall_homebrew -fq
+          rm ~/uninstall_homebrew
+      fi
+    # define functions to unset and reset encrypted variables
+    - function unset_secure {
+          CONDA_TOKEN_SAVE=$CONDA_REPO_TOKEN;
+          unset CONDA_REPO_TOKEN;
+          }
+    - function reset_secure {
+          export CONDA_REPO_TOKEN=$CONDA_TOKEN_SAVE;
+          }
+    - unset_secure
+    # increase open files limit
+    - ulimit -a
+    - ulimit -Sn 10000
+    - ulimit -a
+      # select the os name for the conda installer
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+          OS_NAME=MacOSX;
+      else
+          OS_NAME=Linux;
+      fi
+    # Install Miniconda.
+    - |
+      echo ""
+      echo "Installing a fresh version of Miniconda."
+      MINICONDA_URL="https://repo.continuum.io/miniconda"
+      MINICONDA_FILE="Miniconda3-latest-${OS_NAME}-x86_64.sh"
+      curl -L -O "${MINICONDA_URL}/${MINICONDA_FILE}"
+      bash $MINICONDA_FILE -bp $HOME/miniconda3
+    - source $HOME/miniconda3/bin/activate root
+    - hash -r
+    - reset_secure
+
+before_script:
+    - if [[ $TRAVIS_OS_NAME == "linux" ]]; then
+          export "DISPLAY=:99.0";
+          sh -e /etc/init.d/xvfb start;
+          sleep 3;
+      fi
+
 install:
-  # select the os name for the conda installer
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-        OS_NAME=MacOSX;
-    else
-        OS_NAME=Linux;
-    fi
-  # We do this conditionally because it saves us some downloading if the
-  # version is the same.
-  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-"${OS_NAME}"-x86_64.sh -O miniconda.sh;
-  # make sure we use an 'innocent' default matplotlib environment
-  - touch matplotlibrc
-  # setup conda environment
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  - pip install pyyaml  # is somehow not included in the current conda installation
-  - hash -r
-  - conda config --set always_yes yes --set changeps1 no
-  - conda update -q conda
-  # install conda build and anaconda-client for deploy
-  - conda install conda-build anaconda-client
-  # Useful for debugging any issues with conda
-  - conda info -a
-  - 'ENVKEY=py"${PYTHON_VERSION}"'
-  - conda env create -f tests/envs/environment_$ENVKEY.yml
-  - source activate psyplot_$ENVKEY
-  # use latest development version
-  # NOTE: Remove this when psyplot is stable enough
-  - git clone "https://github.com/Chilipp/psyplot.git" -b $TRAVIS_BRANCH || git clone "https://github.com/Chilipp/psyplot.git"
-  - cd psyplot && python setup.py install && cd .. && rm -rf psyplot
-  # use the branch from psy-simple
-  - git clone "https://github.com/Chilipp/psy-simple.git" -b $TRAVIS_BRANCH || git clone "https://github.com/Chilipp/psy-simple.git"
-  - cd psy-simple && python setup.py install && cd .. && rm -rf psy-simple
-  - if [[ $TRAVIS_TAG == "" ]]; then export GIT_BRANCH=$TRAVIS_BRANCH; fi
-  # install coveralls
-  - pip install coveralls
-  # install psyplot
-  - python setup.py install
-  # export the environment for debugging
-  - conda env export -n psyplot_$ENVKEY
-  # print versions of all the important requirements
-  - psyplot -aV
-  # add conda-forge channel for build
-  - conda config --add channels chilipp/label/$TRAVIS_BRANCH
-  - conda config --add channels conda-forge
+    # unset the global CONDA_REPO_TOKEN variable because it is not needed
+    # during the tests. This decreases the vulnerability
+    - unset_secure
+    - |
+        echo ""
+        echo "Configuring conda."
+        conda config --set always_yes yes --set changeps1 no
+        conda config --add channels conda-forge
+        conda config --add channels chilipp
+        conda update -q conda
+        conda install conda-build anaconda-client conda-verify
+    - if [[ $TRAVIS_TAG == "" ]]; then
+        export GIT_BRANCH=$TRAVIS_BRANCH;
+        conda config --add channels chilipp/label/${TRAVIS_BRANCH};
+      fi
+    - python ci/setup_append.py ci/conda-recipe
+    - if [[ $USE_PIP == true ]]; then
+        python -m pip install . -r ci/requirements.txt;
+      fi
+    - conda info -a
+    - conda list
+    - reset_secure
 
 script:
-  # run the tests
-  - coverage run --source=psy_reg setup.py test -a "-v"
-  - conda build ci/conda-recipe --python $PYTHON_VERSION
-  # deploy here (don't use travis deploy because it requires homebrew)
-  - if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "Chilipp/psy-reg" && $DEPLOY_CONDA == "true" ]]; then
-        conda activate base;
-        ci/deploy_anaconda.py;
-    fi
-
-after_success:
-  - coveralls
+    - unset_secure
+    # install conda
+    - if [[ $USE_PIP == true ]]; then
+          pytest -v --cov=psyplot && codecov;
+      else
+          conda build ci/conda-recipe --python $PYTHON_VERSION;
+      fi
+    # export the pw to make it available for the deploy
+    - reset_secure
+    # deploy here (don't use travis deploy because it requires homebrew)
+    - if [[ $DEPLOY_CONDA == "true" && $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "Chilipp/psy-reg" ]]; then
+          ci/deploy_anaconda.py;
+      fi
