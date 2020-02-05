@@ -7,7 +7,6 @@ to fit a linear model to the data and visualize it."""
 from __future__ import division
 import six
 import inspect
-from warnings import warn
 from functools import partial
 from itertools import islice, cycle, repeat
 import numpy as np
@@ -236,14 +235,6 @@ class InitialParameters(Formatoption):
     def _estimate_p0(self, i):
         model = self.fit.model
         bounds = self.param_bounds.bounds[i]
-        if bounds is None or np.isinf(bounds).any():
-            warn(("[%s] - Need finite parameter boundaries for automatic "
-                  "estimation!") % (self.logger.name, ),
-                 RuntimeWarning)
-            return None
-        if np.ndim(bounds) == 1:
-            bounds = [bounds]
-        bounds = [t for t, arg in zip(cycle(bounds), args)]
         da = next(islice(self.iter_raw_data, i, i+1))
         x, xname, y, yname = self.fit.get_xy(i, da)
 
@@ -428,7 +419,6 @@ class LinearRegressionFit(Formatoption):
         return x_line, fit.predict(x_line), getattr(fit, 'attrs', {}), fit
 
     def _scipy_curve_fit(self, x, y, x_line, **kwargs):
-        from scipy.optimize import curve_fit
         kwargs.pop('fix', None)
         fit = self.model.fit(x, y, **kwargs)
         return x_line, fit.predict(x_line), getattr(fit, 'attrs', {}), fit
