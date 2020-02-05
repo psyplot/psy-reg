@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('recipe_dir', help="Path to the conda recipe directory")
 parser.add_argument(
-    "packages", nargs="+", metavar="PACKAGE=VERSION",
+    "packages", nargs="*", metavar="PACKAGE=VERSION",
     help="Package specifications to include in the test.requires section")
 
 args = parser.parse_args()
