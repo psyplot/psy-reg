@@ -1,5 +1,10 @@
 language: generic
 
+# set clone depth to false to make sure that conda build can write the
+# correct GIT_BUILD_STR
+git:
+  depth: false
+
 env:
     matrix:
         # python 3.8
@@ -7,8 +12,10 @@ env:
         - PYTHON_VERSION=3.8 USE_PIP=true
         # python 3.7
         - PYTHON_VERSION=3.7 DEPLOY_CONDA=true
+        - PYTHON_VERSION=3.7 DEPLOY_CONDA=true BUILD_STR_END=
     global:
-        - secure: "b+zPZDRvMUfT3mLoIf9xDOO79OkvoE1552Z0a2OxBDbpLcNCODzwhGly7B13p+uLzCgsJqo7ceTdWf4jJfdxYWUK3KINULUrFRBjE55PXZCUeWHvZrm0Tt522TsGekxn7U3DFmVW+OSCRCiyWL7r7OBIOFgscFusGP6GBtSvArTdUmuQOTGwMrEBweR2rqpo+xA1NPAev+oWt+Alxa6u+moALLrGnYXXWaZ94HFCj2OEodKe1LJ3MpwKDVrrHhR8Rxqy/4Ts+n44cGhfcu6oMTrxnLPQrZv/QMK5343iC1sKrCempVBB6Pr0GE/nbDAuxmchdoDc0kOaabEiAvBKCIH+y/8Q2WVhFJSxmDYqUpQqvkK8rjW2gFc72oC9C5aUaG6mWxmPOvhynSUppRIumvmTFs+SB0/4TqZefLe6V72C29/NGNN1xLhQMvp2QlYqF7DKoNtB0UKuF6TmdCN8KrkiCoM66bXSsNt7ueCOnD/Fq5uJE6cCTGbg3qx6psXulkmvFZcAyrdmF10Qol6eoMrnnOxjOw0elDhWa8yW+wSOKJUG6Fn2QKmTSEL5dV07z/vzAoy6yCFYPwROk8LvdUN/8c4uni4Odck+OLT8eqHUeoQyJdc9wCxvJ1BFIE6gflTOFQM54uu80kh+njLOYggM6hjKlAeqSIE47gjJ5EM="
+        - BUILD_STR_END=cf
+        - secure: "AT70qVht/sEJlbqTVl1MPg3R8cef3D6uaH3wxWIqgUJTmurwoprA5u20mQcTUL+aUUTwmnsYiwg0xCkEn7fON9/dPeNQVKTYnVuM7+eya7AWTKnuDfM7ZrOfPapZ3nvZ+MMTaPyn96clcFG2NteIVxI7ro3PuYfB/tKyyG1Za9NOqJKkJbKKgIKzWrHAfQPwX6XOQRg6tULjb2WRQsM8sLfB+BFd0dpoBzpCioO+5hlqRa8avd6Qp0ZhsZH9yo2marxNpCv1zrKD/EWUpWP+tFQTQh5fAi9/iJMOAmg1igy9QOJO7XVv/dKi3wr+a3H82ZREvQ1xOLWCMQaFVlcH2RF4r2eaGI44K5YQKcAzw8F8Puy6Sl5MaR4GRaJLSArFFtTnNNmPhHlKshP/RKEHxB+Rnu7vVj02WQw9k9grkHy4JQl35dyrgoGmjI3sXpBGPCt8drhgbPUzGz4Gwn4tguqsyrma1a299STLorYq4bvPQJIev8UzPekcPJ2wkU49XWmmbEKhVp+cVuzTkF7spIiPqIt5L4Rx+6O6WQMN/ss5Fk3r9fmEfYwQLwFwDVnf2tb8HfDpqFG8T4c/9hRPg+XWrQqbakxOdM/xOgezF1OXL0BXt9/ez1HcX8fo5CR0vZr1E8pXHxffZnkS5FFIDSWCGpTgha7gH3ONMFg/5/s="
 
 os:
     - linux
@@ -79,13 +86,17 @@ install:
         echo ""
         echo "Configuring conda."
         conda config --set always_yes yes --set changeps1 no
-        conda config --add channels conda-forge
-        conda config --add channels chilipp
+        if [[ ${BUILD_STR_END} == "cf" ]]; then
+            conda config --add channels conda-forge
+        else
+            conda config --add channels chilipp
+        fi
+        conda config --add channels psyplot
         conda update -q conda
         conda install conda-build anaconda-client conda-verify
     - if [[ $TRAVIS_TAG == "" ]]; then
         export GIT_BRANCH=$TRAVIS_BRANCH;
-        conda config --add channels chilipp/label/${TRAVIS_BRANCH};
+        conda config --add channels psyplot/label/${TRAVIS_BRANCH};
       fi
     - python ci/setup_append.py ci/conda-recipe
     - if [[ $USE_PIP == true ]]; then
@@ -106,6 +117,6 @@ script:
     # export the pw to make it available for the deploy
     - reset_secure
     # deploy here (don't use travis deploy because it requires homebrew)
-    - if [[ $DEPLOY_CONDA == "true" && $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "Chilipp/psy-reg" ]]; then
+    - if [[ $DEPLOY_CONDA == "true" && $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_REPO_SLUG == "psyplot/psy-reg" ]]; then
           ci/deploy_anaconda.py;
       fi
