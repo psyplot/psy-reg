@@ -59,4 +59,4 @@ or after having install pytest_::
 
 
 .. _pytest: https://pytest.org/latest/contents.html
-.. _github: https://github.com/Chilipp/psy-reg
+.. _github: https://github.com/psyplot/psy-reg
