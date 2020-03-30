@@ -80,7 +80,7 @@ if on_rtd or not osp.exists(osp.join(osp.dirname(__file__), 'api')):
 # The cdo example would require the installation of climate data operators
 # which is a bit of an overkill
 example_gallery_config = dict(
-    urls='https://github.com/Chilipp/psy-reg/blob/master/examples',
+    urls='https://github.com/psyplot/psy-reg/blob/master/examples',
     )
 
 napoleon_use_admonition_for_examples = True

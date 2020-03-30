@@ -11,7 +11,7 @@ psy-reg: Psyplot plugin for visualizing and calculating regression plots
     * - docs
       - |docs|
     * - tests
-      - |travis| |appveyor| |requires| |coveralls|
+      - |travis| |appveyor| |requires| |codecov|
     * - package
       - |version| |conda| |supported-versions| |supported-implementations| |zenodo|
 
@@ -19,21 +19,21 @@ psy-reg: Psyplot plugin for visualizing and calculating regression plots
     :alt: Documentation Status
     :target: http://psy-reg.readthedocs.io/en/latest/?badge=latest
 
-.. |travis| image:: https://travis-ci.org/Chilipp/psy-reg.svg?branch=master
+.. |travis| image:: https://travis-ci.org/psyplot/psy-reg.svg?branch=master
     :alt: Travis
-    :target: https://travis-ci.org/Chilipp/psy-reg
+    :target: https://travis-ci.org/psyplot/psy-reg
 
-.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/3jk6ea1n4a4dl6vk?svg=true
+.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/48pqaquat9bennac/branch/master?svg=true
     :alt: AppVeyor
-    :target: https://ci.appveyor.com/project/Chilipp/psy-reg
+    :target: https://ci.appveyor.com/project/psyplot/psy-reg
 
-.. |coveralls| image:: https://coveralls.io/repos/github/Chilipp/psy-reg/badge.svg?branch=master
+.. |codecov| image:: https://codecov.io/gh/psyplot/psy-reg/branch/master/graph/badge.svg
     :alt: Coverage
-    :target: https://coveralls.io/github/Chilipp/psy-reg?branch=master
+    :target: https://codecov.io/gh/psyplot/psy-reg
 
-.. |requires| image:: https://requires.io/github/Chilipp/psy-reg/requirements.svg?branch=master
+.. |requires| image:: https://requires.io/github/psyplot/psy-reg/requirements.svg?branch=master
     :alt: Requirements Status
-    :target: https://requires.io/github/Chilipp/psy-reg/requirements/?branch=master
+    :target: https://requires.io/github/psyplot/psy-reg/requirements/?branch=master
 
 .. |version| image:: https://img.shields.io/pypi/v/psy-reg.svg?style=flat
     :alt: PyPI Package latest release
