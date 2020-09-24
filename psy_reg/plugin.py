@@ -7,6 +7,7 @@ from psyplot.config.rcsetup import RcParams
 from psy_simple.plugin import (
     try_and_error, validate_float, validate_none, validate_limits,
     validate_dict, validate_int, validate_cmap, validate_str,
+    ValidateList,
     ValidateInStrings, safe_list, rcParams as psyps_rc)
 from psyplot.compat.pycompat import map, filter
 from psy_reg import __version__ as plugin_version
