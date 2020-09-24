@@ -7,8 +7,7 @@ from psyplot.config.rcsetup import RcParams
 from psy_simple.plugin import (
     try_and_error, validate_float, validate_none, validate_limits,
     validate_dict, validate_int, validate_cmap, validate_str,
-    ValidateInStrings, safe_list, validate_nseq_float,
-    rcParams as psyps_rc)
+    ValidateInStrings, safe_list, rcParams as psyps_rc)
 from psyplot.compat.pycompat import map, filter
 from psy_reg import __version__ as plugin_version
 
@@ -205,7 +204,7 @@ def validate_param_bounds(value):
 def validate_p0(value):
     value = safe_list(value)
     for i, v in enumerate(value):
-        value[i] = try_and_error(validate_nseq_float(),
+        value[i] = try_and_error(ValidateList(float),
                                  ValidateInStrings('p0', ['auto'], True))(v)
     return value
 
