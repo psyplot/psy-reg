@@ -545,7 +545,7 @@ class IdealLine(Formatoption):
             linestyles = cycle(safe_list(self.plot.value))
         for vals, da, fit_type, c, ls in zip(
                 cycle(value), self.iter_data, cycle(safe_list(self.fit.value)),
-                self.id_color.colors, linestyles):
+                self.id_color.extended_colors, linestyles):
             if da.ndim > 1:
                 da = da[0]
             try:
