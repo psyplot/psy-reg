@@ -78,7 +78,7 @@ See the full documentation on
 
 Copyright
 ---------
-Copyright (C) 2016-2018 Philipp S. Sommer
+Copyright (C) 2016-2020 Philipp S. Sommer
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

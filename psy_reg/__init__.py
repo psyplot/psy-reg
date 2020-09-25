@@ -6,4 +6,12 @@ This package uses statsmodels and scipy for it's calculations.
 """
 from psy_reg.version import __version__
 
-__author__ = "Philipp Sommer (philipp.sommer@unil.ch)"
+__author__ = "Philipp S. Sommer"
+__copyright__ = "Copyright 2016 - 2020, Philipp S. Sommer"
+__credits__ = ["Philipp S. Sommer"]
+__license__ = "GPL-2.0-only"
+
+__maintainer__ = "Philipp S. Sommer"
+__email__ = "philipp.sommer@hzg.de"
+
+__status__ = "Production"
