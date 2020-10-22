@@ -37,7 +37,7 @@ class PyTest(TestCommand):
         sys.exit(errno)
 
 
-+cmdclass = versioneer.get_cmdclass({'test': PyTest})
+cmdclass = versioneer.get_cmdclass({'test': PyTest})
 
 
 setup(name='psy-reg',
