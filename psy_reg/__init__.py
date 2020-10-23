@@ -4,7 +4,10 @@ This package contains the plotters for interactive visualization tasks with the
 abilities to calculate and visualize regression plots.
 This package uses statsmodels and scipy for it's calculations.
 """
-from psy_reg.version import __version__
+from ._version import get_versions
+__version__ = get_versions()['version']
+del get_versions
+
 
 __author__ = "Philipp S. Sommer"
 __copyright__ = "Copyright 2016 - 2020, Philipp S. Sommer"
