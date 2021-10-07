@@ -54,5 +54,5 @@ about:
   description: |
     This psyplot plugin can be used to make fits to your data and visualize
     them
-  doc_url: http://psyplot.readthedocs.io/projects/psy-reg
+  doc_url: http://psyplot.github.io/psy-reg
 dev_url: https://github.com/psyplot/psy-reg
