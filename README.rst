@@ -9,13 +9,13 @@ psy-reg: Psyplot plugin for visualizing and calculating regression plots
     :widths: 10 90
 
     * - docs
-        - |docs|
+      - |docs|
     * - tests
-        - |circleci| |appveyor| |codecov|
+      - |circleci| |appveyor| |codecov|
     * - package
-        - |version| |conda| |github| |zenodo|
+      - |version| |conda| |github| |zenodo|
     * - implementations
-        - |supported-versions| |supported-implementations|
+      - |supported-versions| |supported-implementations|
 
 .. |docs| image:: https://img.shields.io/github/deployments/psyplot/psy-reg/github-pages
     :alt: Documentation
