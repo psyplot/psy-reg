@@ -55,10 +55,6 @@ See the :ref:`plot_methods` and examples_ for more information.
         :alt: Coverage
         :target: https://codecov.io/gh/psyplot/psy-reg
 
-    .. |requires| image:: https://requires.io/github/psyplot/psy-reg/requirements.svg?branch=master
-        :alt: Requirements Status
-        :target: https://requires.io/github/psyplot/psy-reg/requirements/?branch=master
-
     .. |version| image:: https://img.shields.io/pypi/v/psy-reg.svg?style=flat
         :alt: PyPI Package latest release
         :target: https://pypi.python.org/pypi/psy-reg
