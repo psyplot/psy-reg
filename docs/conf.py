@@ -16,9 +16,7 @@ import sphinx
 import inspect
 import os
 import os.path as osp
-import sys
 import re
-import six
 import subprocess as spr
 from itertools import chain
 from collections import defaultdict
@@ -55,33 +53,13 @@ extensions = [
     'IPython.sphinxext.ipython_directive',
     'psyplot.sphinxext.extended_napoleon',
     'autodocsumm',
-    'sphinx_nbexamples',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-# on_rtd is whether we are on readthedocs.org, this line of code grabbed from
-# docs.readthedocs.org
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-
-# boolean controlling wether to calculate the examples or not
-process_examples = (
-    not osp.exists(osp.join(osp.dirname(__file__), 'examples')) or on_rtd)
-
-if on_rtd:
-    spr.call([sys.executable] +
-             ('-m ipykernel install --user --name python3 '
-              '--display-name python3').split())
-
-if on_rtd or not osp.exists(osp.join(osp.dirname(__file__), 'api')):
+if not osp.exists(osp.join(osp.dirname(__file__), 'api')):
     spr.check_call(['bash', 'apigen.bash'])
-
-# The cdo example would require the installation of climate data operators
-# which is a bit of an overkill
-example_gallery_config = dict(
-    urls='https://github.com/psyplot/psy-reg/blob/master/examples',
-    )
 
 napoleon_use_admonition_for_examples = True
 
@@ -101,9 +79,11 @@ not_document_data = ['psy_reg.plugin.defaultParams',
 ipython_savefig_dir = os.path.join(os.path.dirname(__file__), '_static')
 
 # General information about the project.
-project = u'psy-reg'
-copyright = u'2015, Philipp Sommer'
-author = u'Philipp Sommer'
+project = 'psy-reg'
+copyright = ", ".join(
+    psy_reg.__copyright__.strip().replace("Copyright (C) ", "").splitlines()
+)
+author = psy_reg.__author__
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -137,18 +117,13 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-if not on_rtd:  # only import and set the theme if we're building docs locally
-    import sphinx_rtd_theme
-    html_theme = 'sphinx_rtd_theme'
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme = 'sphinx_rtd_theme'
 
-    # Add any paths that contain custom static files (such as style sheets)
-    # here, relative to this directory. They are copied after the builtin
-    # static files, so a file named "default.css" will overwrite the builtin
-    # "default.css".
-    html_static_path = ['_static']
-
-# otherwise, readthedocs.org uses their theme by default, so no need to specify
+# Add any paths that contain custom static files (such as style sheets)
+# here, relative to this directory. They are copied after the builtin
+# static files, so a file named "default.css" will overwrite the builtin
+# "default.css".
+html_static_path = ['_static']
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'psy-regdoc'
@@ -164,8 +139,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'psy-reg.tex', u'psy-reg Documentation',
-   u'Philipp Sommer', 'manual'),
+  (master_doc, 'psy-reg.tex', 'psy-reg Documentation',
+   'Philipp S. Sommer', 'manual'),
 ]
 
 
@@ -174,7 +149,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'psy-reg', u'psy-reg Documentation',
+    (master_doc, 'psy-reg', 'psy-reg Documentation',
      [author], 1)
 ]
 
@@ -185,8 +160,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'psy-reg', u'psy-reg Documentation',
-   author, 'psy-reg', 'The psyplot plugin for simple visualizations',
+  (master_doc, 'psy-reg', 'psy-reg Documentation',
+   author, 'psy-reg', 'The psyplot plugin for statistical visualizations',
    'Miscellaneous'),
 ]
 
@@ -204,23 +179,15 @@ epub_exclude_files = ['search.html']
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-    'pandas': ('http://pandas.pydata.org/pandas-docs/stable/', None),
+    'pandas': ('https://pandas.pydata.org/pandas-docs/stable/', None),
     'numpy': ('https://docs.scipy.org/doc/numpy/', None),
-    'matplotlib': ('http://matplotlib.org/', None),
-    'sphinx': ('http://www.sphinx-doc.org/en/stable/', None),
-    'xarray': ('http://xarray.pydata.org/en/stable/', None),
-    'cartopy': ('http://scitools.org.uk/cartopy/docs/latest/', None),
-    'mpl_toolkits': ('http://matplotlib.org/basemap/', None),
-    'psyplot': ('https://psyplot.readthedocs.io/en/v1.0.0.dev0', None),
-    'psy_simple': (
-        'https://psyplot.readthedocs.io/projects/psy-simple/en/latest/', None),
-    'psy_reg': (
-        'https://psyplot.readthedocs.io/projects/psy-reg/en/latest/', None),
+    'matplotlib': ('https://matplotlib.org/stable/', None),
+    'sphinx': ('https://www.sphinx-doc.org/en/stable/', None),
+    'xarray': ('https://xarray.pydata.org/en/stable/', None),
+    'psyplot': ('https://psyplot.github.io/psyplot/', None),
+    'psy_simple': ('https://psyplot.github.io/psy-simple/', None),
+    'python': ('https://docs.python.org/3/', None),
 }
-if six.PY3:
-    intersphinx_mapping['python'] = ('https://docs.python.org/3.6/', None)
-else:
-    intersphinx_mapping['python'] = ('https://docs.python.org/2.7/', None)
 
 
 def group_formatoptions(app, what, name, obj, section, parent):

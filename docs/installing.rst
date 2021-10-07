@@ -10,16 +10,13 @@ How to install
 
 Installation using conda
 ^^^^^^^^^^^^^^^^^^^^^^^^
-We highly recommend to use conda_ for installing psy-reg.
-
-After downloading the installer from anaconda_, you can install psy-reg simply
-via::
+We highly recommend to use conda_ for installing psy-reg. After downloading
+the `miniconda installer`_, you can install psy-reg simply via::
 
     $ conda install -c conda-forge psy-reg
 
-.. _anaconda: https://www.continuum.io/downloads
-.. _conda-forge: http://conda-forge.github.io/
-.. _conda: http://conda.io/
+.. _miniconda installer: https://conda.io/en/latest/miniconda.html
+.. _conda: https://docs.conda.io/en/latest/
 
 Installation using pip
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -39,8 +36,8 @@ Besides the psyplot_ package, psy-reg uses the regression utilities from
 - scipy_: The Python-based ecosystem of open-source software for mathematics,
   science, and engineering
 
-.. _psyplot: http://psyplot.readthedocs.io/en/latest/
-.. _statsmodels: http://www.statsmodels.org/stable/index.html
+.. _psyplot: https://psyplot.github.io/psyplot/
+.. _statsmodels: https://www.statsmodels.org/stable/index.html
 .. _scipy: https://www.scipy.org/
 
 
@@ -58,5 +55,5 @@ or after having install pytest_::
     $ py.test
 
 
-.. _pytest: https://pytest.org/latest/contents.html
+.. _pytest: https://pytest.org/en/latest/contents.html
 .. _github: https://github.com/psyplot/psy-reg

@@ -15,11 +15,12 @@ data, fit a regression to it and visualize it through the psy-simple_ plugin.
 It's plot methods are the :attr:`~psyplot.project.ProjectPlotter.linreg` and
 :attr:`~psyplot.project.ProjectPlotter.densityreg` plot methods.
 
-See the :ref:`plot_methods` and :ref:`gallery_examples` for more information.
+See the :ref:`plot_methods` and examples_ for more information.
 
-.. _psy-simple: http://psyplot.readthedocs.io/projects/psy-simple/
-.. _statsmodels: http://www.statsmodels.org/stable/index.html
+.. _psy-simple: https://psyplot.github.io/psy-simple/
+.. _statsmodels: https://www.statsmodels.org/stable/index.html
 .. _scipy: https://www.scipy.org/
+.. _examples: https://psyplot.github.io/examples/
 
 .. start-badges
 
@@ -32,17 +33,19 @@ See the :ref:`plot_methods` and :ref:`gallery_examples` for more information.
         * - docs
           - |docs|
         * - tests
-          - |travis| |appveyor| |requires| |coveralls|
+          - |circleci| |appveyor| |codecov|
         * - package
-          - |version| |conda| |supported-versions| |supported-implementations| |zenodo|
+          - |version| |conda| |github| |zenodo|
+        * - implementations
+          - |supported-versions| |supported-implementations|
 
-    .. |docs| image:: http://readthedocs.org/projects/psy-reg/badge/?version=latest
-        :alt: Documentation Status
-        :target: http://psy-reg.readthedocs.io/en/latest/?badge=latest
+    .. |docs| image:: https://img.shields.io/github/deployments/psyplot/psy-reg/github-pages
+        :alt: Documentation
+        :target: http://psyplot.github.io/psy-reg/
 
-    .. |travis| image:: https://travis-ci.org/psyplot/psy-reg.svg?branch=master
-        :alt: Travis
-        :target: https://travis-ci.org/psyplot/psy-reg
+    .. |circleci| image:: https://circleci.com/gh/psyplot/psy-reg/tree/master.svg?style=svg
+        :alt: CircleCI
+        :target: https://circleci.com/gh/psyplot/psy-reg/tree/master
 
     .. |appveyor| image:: https://ci.appveyor.com/api/projects/status/48pqaquat9bennac/branch/master?svg=true
         :alt: AppVeyor
@@ -51,10 +54,6 @@ See the :ref:`plot_methods` and :ref:`gallery_examples` for more information.
     .. |codecov| image:: https://codecov.io/gh/psyplot/psy-reg/branch/master/graph/badge.svg
         :alt: Coverage
         :target: https://codecov.io/gh/psyplot/psy-reg
-
-    .. |requires| image:: https://requires.io/github/psyplot/psy-reg/requirements.svg?branch=master
-        :alt: Requirements Status
-        :target: https://requires.io/github/psyplot/psy-reg/requirements/?branch=master
 
     .. |version| image:: https://img.shields.io/pypi/v/psy-reg.svg?style=flat
         :alt: PyPI Package latest release
@@ -76,6 +75,10 @@ See the :ref:`plot_methods` and :ref:`gallery_examples` for more information.
         :alt: Zenodo
         :target: https://zenodo.org/badge/latestdoi/83479056
 
+    .. |github| image:: https://img.shields.io/github/release/psyplot/psy-reg.svg
+        :target: https://github.com/psyplot/psy-reg/releases/latest
+        :alt: Latest github release
+
 .. end-badges
 
 
@@ -87,10 +90,8 @@ Documentation
 
     installing
     plot_methods
-    examples/index
     contribute
     api/psy_reg
-
 
 
 Indices and tables
