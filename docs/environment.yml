@@ -1,24 +1,16 @@
 name: psyplot_docs
 channels:
-    - psyplot/label/gh-migration
-    - psyplot/label/dev
+    - local
     - psyplot/label/master
-    - psyplot
-    - chilipp/label/conda-forge
+    - conda-forge
 dependencies:
-    - python>3.5
+    - python=3.8
     - dask
-    - xarray
     - netCDF4
-    - matplotlib
     - seaborn
     - ipython
-    - nbconvert
-    - jupyter_client
-    - ipykernel
     - sphinx
-    - psyplot
-    - psy-simple
-    - pip:
-        - autodocsumm
-        - sphinx-nbexamples
+    - sphinx_rtd_theme
+    - psy-reg
+    - autodocsumm
+    - pip

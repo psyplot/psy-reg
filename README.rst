@@ -9,19 +9,21 @@ psy-reg: Psyplot plugin for visualizing and calculating regression plots
     :widths: 10 90
 
     * - docs
-      - |docs|
+        - |docs|
     * - tests
-      - |travis| |appveyor| |requires| |codecov|
+        - |circleci| |appveyor| |codecov|
     * - package
-      - |version| |conda| |supported-versions| |supported-implementations| |zenodo|
+        - |version| |conda| |github| |zenodo|
+    * - implementations
+        - |supported-versions| |supported-implementations|
 
-.. |docs| image:: http://readthedocs.org/projects/psy-reg/badge/?version=latest
-    :alt: Documentation Status
-    :target: http://psy-reg.readthedocs.io/en/latest/?badge=latest
+.. |docs| image:: https://img.shields.io/github/deployments/psyplot/psy-reg/github-pages
+    :alt: Documentation
+    :target: http://psyplot.github.io/psy-reg/
 
-.. |travis| image:: https://travis-ci.org/psyplot/psy-reg.svg?branch=master
-    :alt: Travis
-    :target: https://travis-ci.org/psyplot/psy-reg
+.. |circleci| image:: https://circleci.com/gh/psyplot/psy-reg/tree/master.svg?style=svg
+    :alt: CircleCI
+    :target: https://circleci.com/gh/psyplot/psy-reg/tree/master
 
 .. |appveyor| image:: https://ci.appveyor.com/api/projects/status/48pqaquat9bennac/branch/master?svg=true
     :alt: AppVeyor
@@ -55,6 +57,9 @@ psy-reg: Psyplot plugin for visualizing and calculating regression plots
     :alt: Zenodo
     :target: https://zenodo.org/badge/latestdoi/83479056
 
+.. |github| image:: https://img.shields.io/github/release/psyplot/psy-reg.svg
+    :target: https://github.com/psyplot/psy-reg/releases/latest
+    :alt: Latest github release
 
 .. end-badges
 
@@ -65,16 +70,16 @@ data, fit a regression to it and visualize it through the psy-simple_ plugin.
 It's plot methods are the linreg_ and densityreg_ plot methods.
 
 See the full documentation on
-`readthedocs.org <http://psyplot.readthedocs.io/projects/psy-simple>`__ for all
-`plot methods`_ and examples_.
+`psyplot.github.io/psy-reg/ <http://psyplot.github.io/psy-reg>`__ for all
+`plot methods`_, and checkout the examples_.
 
-.. _psy-simple: http://psyplot.readthedocs.io/projects/psy-simple/
-.. _statsmodels: http://www.statsmodels.org/stable/index.html
+.. _psy-simple: http://psyplot.github.io/psy-simple/
+.. _statsmodels: https://www.statsmodels.org/stable/index.html
 .. _scipy: https://www.scipy.org/
-.. _linreg: http://psyplot.readthedocs.io/projects/psy-reg/en/latest/generated/psyplot.project.plot.linreg.html#psyplot.project.plot.linreg
-.. _densityreg: http://psyplot.readthedocs.io/projects/psy-reg/en/latest/generated/psyplot.project.plot.densityreg.html#psyplot.project.plot.densityreg
-.. _plot methods: http://psyplot.readthedocs.io/projects/psy-simple/en/latest/plot_methods
-.. _examples: http://psyplot.readthedocs.io/projects/psy-simple/en/latest/examples
+.. _linreg: http://psyplot.github.io/psy-reg/generated/psyplot.project.plot.linreg.html#psyplot.project.plot.linreg
+.. _densityreg: http://psyplot.github.io/psy-reg/generated/psyplot.project.plot.densityreg.html#psyplot.project.plot.densityreg
+.. _plot methods: http://psyplot.github.io/psy-simple/plot_methods
+.. _examples: http://psyplot.github.io/examples/
 
 Copyright
 ---------
