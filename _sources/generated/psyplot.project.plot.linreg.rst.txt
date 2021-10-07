@@ -1,0 +1,6 @@
+psyplot.project.plot.linreg
+===========================
+
+.. currentmodule:: psyplot.project
+
+.. autoattribute:: plot.linreg

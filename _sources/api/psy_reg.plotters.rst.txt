@@ -1,0 +1,7 @@
+psy\_reg.plotters module
+========================
+
+.. automodule:: psy_reg.plotters
+   :members:
+   :undoc-members:
+   :show-inheritance:

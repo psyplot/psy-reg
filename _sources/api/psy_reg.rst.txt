@@ -1,0 +1,17 @@
+API Reference
+================
+
+.. automodule:: psy_reg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   psy_reg.plotters
+   psy_reg.plugin
+   psy_reg.utils
