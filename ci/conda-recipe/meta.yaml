@@ -46,9 +46,11 @@ test:
 
 about:
   home: https://github.com/psyplot/psy-reg
-  license: GPL-2.0
+  license: LGPL-3.0-only
   license_family: GPL
-  license_file: LICENSE
+  license_file:
+    - COPYING
+    - COPYING.LESSER
   summary: Psyplot plugin for visualizing and calculating regression plots
 
   description: |
