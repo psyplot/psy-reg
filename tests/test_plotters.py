@@ -217,7 +217,7 @@ class LinRegPlotterTest(unittest.TestCase):
             err = np.sqrt(plotter.fit.fits[0].pcov[0, 0])
             self.assertLess(err, 0.01)
 
-        if not six.PY2 and sns_version >= '0.8':
+        if not six.PY2 and sns_version and sns_version >= '0.8':
             # Test whether the warning is raised that the boundaries have
             # to be specified
             with self.assertWarnsRegex(RuntimeWarning, 'boundaries'):
