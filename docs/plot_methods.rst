@@ -3,18 +3,23 @@
 psyplot plot methods
 ====================
 
-This plugin defines the following new plot methods for the
-:class:`psyplot.project.ProjectPlotter` class. They can, for example, be
-accessed through
+.. raw:: html
 
-.. ipython::
+    <p>
+        The documentation of psy-reg is now hosted at, <a href="https://psyplot.github.io/psy-reg/plot_methods.html">https://psyplot.github.io/psy-reg/plot_methods.html</a>.
+        You should be redirected within 5 seconds.
+    </p>
 
-    In [1]: import psyplot.project as psy
 
-    In [2]: psy.plot.linreg
 
-.. autosummary::
-    :toctree: generated
+.. toctree::
+    :hidden:
 
-    ~psyplot.project.plot.linreg
-    ~psyplot.project.plot.densityreg
+    generated/psyplot.project.plot.lineplot
+    generated/psyplot.project.plot.vector
+    generated/psyplot.project.plot.violinplot
+    generated/psyplot.project.plot.plot2d
+    generated/psyplot.project.plot.combined
+    generated/psyplot.project.plot.density
+    generated/psyplot.project.plot.barplot
+    generated/psyplot.project.plot.fldmean
