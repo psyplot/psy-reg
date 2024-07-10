@@ -2,7 +2,8 @@
 # SPDX-FileCopyrightText: 2020-2021 Helmholtz-Zentrum Geesthacht
 # SPDX-FileCopyrightText: 2016-2024 University of Lausanne
 #
-# SPDX-License-Identifier: CC0-1.0
+# SPDX-License-Identifier: LGPL-3.0-only
 
-include versioneer.py
-include psy_reg/_version.py
+"""pytest configuration script for psy-reg."""
+
+import pytest  # noqa: F401

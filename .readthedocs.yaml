@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2021-2024 Helmholtz-Zentrum hereon GmbH
+# SPDX-FileCopyrightText: 2020-2021 Helmholtz-Zentrum Geesthacht
+# SPDX-FileCopyrightText: 2016-2024 University of Lausanne
+#
+# SPDX-License-Identifier: CC0-1.0
+
+version: 2
+
+formats:
+  - pdf
+  - epub
+  - htmlzip
+
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.10"
+
+sphinx:
+  configuration: docs/conf.py
+
+python:
+  install:
+    - requirements: docs/requirements.txt
+    - method: pip
+      path: .
+      extra_requirements:
+        - docs
