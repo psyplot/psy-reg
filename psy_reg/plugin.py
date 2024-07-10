@@ -1,6 +1,6 @@
-"""psy-simple psyplot plugin
+"""psy-reg psyplot plugin
 
-This module defines the rcParams for the psy-simple plugin"""
+This module defines the rcParams for the psy-reg plugin"""
 
 # SPDX-FileCopyrightText: 2021-2024 Helmholtz-Zentrum hereon GmbH
 # SPDX-FileCopyrightText: 2020-2021 Helmholtz-Zentrum Geesthacht
@@ -21,7 +21,6 @@ from psy_simple.plugin import (
     validate_none,
     validate_str,
 )
-from psyplot.compat.pycompat import filter, map
 from psyplot.config.rcsetup import RcParams
 
 from psy_reg import __version__ as plugin_version

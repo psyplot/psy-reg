@@ -23,7 +23,6 @@ import psy_simple.plotters as psyps
 import statsmodels.api as sm
 from docrep import substitution_pattern
 from psyplot import rcParams
-from psyplot.compat.pycompat import range
 from psyplot.data import CFDecoder, InteractiveList, safe_list
 from psyplot.docstring import docstrings
 from psyplot.plotter import END, START, Formatoption, Plotter
