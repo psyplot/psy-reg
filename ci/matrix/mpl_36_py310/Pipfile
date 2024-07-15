@@ -16,6 +16,7 @@ tox-current-env = {version = "*"}
 PyQt5 = {version="*"}
 PyQtWebEngine = {version="*"}
 matplotlib = "3.6.*"
+numpy = "<2.0.0"
 
 [dev-packages]
 
