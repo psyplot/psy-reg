@@ -12,6 +12,7 @@ psy-reg = {extras = ["testsite"], file = "../../.."}
 psyplot = {ref = "develop", git = "git+https://codebase.helmholtz.cloud/psyplot/psyplot.git"}
 psy-simple = {ref = "develop", git = "git+https://codebase.helmholtz.cloud/psyplot/psy-simple.git"}
 psyplot-gui = {ref = "develop", git = "git+https://codebase.helmholtz.cloud/psyplot/psyplot-gui.git"}
+tox-current-env = {version = "*"}
 PyQt5 = {version="*"}
 PyQtWebEngine = {version="*"}
 matplotlib = "3.7.*"
