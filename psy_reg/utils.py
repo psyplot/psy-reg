@@ -1,34 +1,18 @@
 """Utility functions for psy-reg"""
 
-# Disclaimer
-# ----------
+# SPDX-FileCopyrightText: 2021-2024 Helmholtz-Zentrum hereon GmbH
+# SPDX-FileCopyrightText: 2020-2021 Helmholtz-Zentrum Geesthacht
+# SPDX-FileCopyrightText: 2016-2024 University of Lausanne
 #
-# Copyright (C) 2021 Helmholtz-Zentrum Hereon
-# Copyright (C) 2020-2021 Helmholtz-Zentrum Geesthacht
-# Copyright (C) 2016-2021 University of Lausanne
-#
-# This file is part of psyplot and is released under the GNU LGPL-3.O license.
-# See COPYING and COPYING.LESSER in the root of the repository for full
-# licensing details.
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Lesser General Public License version 3.0 as
-# published by the Free Software Foundation.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU LGPL-3.0 license for more details.
-#
-# You should have received a copy of the GNU LGPL-3.0 license
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# SPDX-License-Identifier: LGPL-3.0-only
 
 import abc
 import inspect
 from itertools import cycle
-from scipy.optimize import curve_fit, differential_evolution
-import numpy as np
 from warnings import warn
+
+import numpy as np
+from scipy.optimize import curve_fit, differential_evolution
 
 
 def rsquared(sim, obs):
@@ -52,7 +36,7 @@ def rsquared(sim, obs):
     float
         The R squared"""
     residuals = obs - sim
-    ss_res = (residuals ** 2).sum()
+    ss_res = (residuals**2).sum()
     ss_tot = ((obs - obs.mean()) ** 2).sum()
     return 1 - (ss_res / ss_tot)
 
@@ -75,12 +59,12 @@ class GenericModel(metaclass=abc.ABCMeta):
     @property
     def rsquared(self):
         """The coefficient of determination, $R^2$"""
-        return self.attrs.get('rsquared', None)
+        return self.attrs.get("rsquared", None)
 
     @property
     def pcov(self):
         """The covariance matrix"""
-        return self.attrs.get('pcov', None)
+        return self.attrs.get("pcov", None)
 
     @property
     def func_kwargs(self):
@@ -107,9 +91,11 @@ class GenericModel(metaclass=abc.ABCMeta):
             return np.sum((y - cls.function(x, *params)) ** 2)
 
         if bounds is None or np.isinf(bounds).any():
-            warn("Need finite parameter boundaries for automatic initial "
-                 "parameter estimation!",
-                 RuntimeWarning)
+            warn(
+                "Need finite parameter boundaries for automatic initial "
+                "parameter estimation!",
+                RuntimeWarning,
+            )
             return None
         if np.ndim(bounds) == 1:
             bounds = [bounds]
@@ -120,8 +106,11 @@ class GenericModel(metaclass=abc.ABCMeta):
         if result.success:
             return result.x
         else:  # return default values
-            warn('Could not estimate initial parameters! Reason: %s' % (
-                result.message, ), RuntimeWarning)
+            warn(
+                "Could not estimate initial parameters! Reason: %s"
+                % (result.message,),
+                RuntimeWarning,
+            )
             return None
 
     @staticmethod
@@ -139,9 +128,8 @@ class GenericModel(metaclass=abc.ABCMeta):
     def fit(cls, x, y, *args, **kwargs):
         params, pcov = curve_fit(cls.function, x, y, *args, **kwargs)
         predicted = cls.function(x, *params)
-        attrs = dict(rsquared=rsquared(predicted, y),
-                     pcov=pcov)
+        attrs = dict(rsquared=rsquared(predicted, y), pcov=pcov)
         if pcov.size == 1:
-            attrs['err'] = np.sqrt(pcov)[0, 0]
+            attrs["err"] = np.sqrt(pcov)[0, 0]
 
         return cls(*params, **attrs)

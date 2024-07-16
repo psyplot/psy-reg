@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2021-2024 Helmholtz-Zentrum hereon GmbH
+# SPDX-FileCopyrightText: 2020-2021 Helmholtz-Zentrum Geesthacht
+# SPDX-FileCopyrightText: 2016-2024 University of Lausanne
+#
+# SPDX-License-Identifier: CC0-1.0
+
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+psy-reg = {extras = ["testsite"], file = "../../.."}
+tox = {version = "*"}
+tox-current-env = {version = "*"}
+psyplot = {ref = "develop", git = "git+https://codebase.helmholtz.cloud/psyplot/psyplot.git"}
+psy-simple = {ref = "develop", git = "git+https://codebase.helmholtz.cloud/psyplot/psy-simple.git"}
+matplotlib = "3.7.*"
+
+[dev-packages]
+
+[pipenv]
+allow_prereleases = true
+
+[requires]
+python_version = "3.9"

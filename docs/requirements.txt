@@ -4,5 +4,6 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
-include versioneer.py
-include psy_reg/_version.py
+sphinx-design
+git+https://codebase.helmholtz.cloud/hcdc/hereon-netcdf/sphinxext.git
+git+https://codebase.helmholtz.cloud/psyplot/psyplot.git@develop
