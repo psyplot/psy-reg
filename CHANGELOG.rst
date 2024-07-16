@@ -2,6 +2,18 @@
 ..
 .. SPDX-License-Identifier: CC-BY-4.0
 
+v1.5.0
+======
+Compatibility fixes and code formatting
+
+Changed
+-------
+- migrate to psyplot-plugin-template `!11 <https://codebase.helmholtz.cloud/psyplot/psy-reg/-/merge_requests/11>`__
+
+Fixed
+-----
+- fixed compatiblity with latest matplotlib version and python 3.12 `!11 <https://codebase.helmholtz.cloud/psyplot/psy-reg/-/merge_requests/11>`__
+
 v1.4.0
 ======
 Compatibility fixes and LGPL license
