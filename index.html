@@ -50,7 +50,23 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-for-development">Installation for development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-using-conda">Installation using conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-using-pip">Installation using pip</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#installation-for-development">Installation for development</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plot_methods.html">psyplot plot methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/psyplot.project.plot.linreg.html">psyplot.project.plot.linreg</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/psyplot.project.plot.linreg.html#psyplot.project.plot.linreg"><code class="docutils literal notranslate"><span class="pre">plot.linreg</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="generated/psyplot.project.plot.densityreg.html">psyplot.project.plot.densityreg</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/psyplot.project.plot.densityreg.html#psyplot.project.plot.densityreg"><code class="docutils literal notranslate"><span class="pre">plot.densityreg</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a><ul>
@@ -128,25 +144,33 @@
 <p><a class="reference external" href="https://codebase.helmholtz.cloud/psyplot/psy-reg/-/pipelines?page=1&amp;scope=all&amp;ref=main"><img alt="CI" src="https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/main/pipeline.svg" /></a>
 <a class="reference external" href="https://codebase.helmholtz.cloud/psyplot/psy-reg/-/graphs/main/charts"><img alt="Code coverage" src="https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/main/coverage.svg" /></a>
 <a class="reference external" href="https://codebase.helmholtz.cloud/psyplot/psy-reg"><img alt="Latest Release" src="https://codebase.helmholtz.cloud/psyplot/psy-reg/-/badges/release.svg" /></a>
-<a href="#id1"><span class="problematic" id="id2">|PyPI version|</span></a>
+<a class="reference external" href="https://pypi.python.org/pypi/psy-reg/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/psy-reg.svg" /></a>
 <a class="reference external" href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
 <a class="reference external" href="https://pycqa.github.io/isort/"><img alt="Imports: isort" src="https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&amp;labelColor=ef8336" /></a>
 <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/"><img alt="PEP8" src="https://img.shields.io/badge/code%20style-pep8-orange.svg" /></a>
 <a class="reference external" href="http://mypy-lang.org/"><img alt="Checked with mypy" src="http://www.mypy-lang.org/static/mypy_badge.svg" /></a>
-<a href="#id3"><span class="problematic" id="id4">|REUSE status|</span></a></p>
+<a class="reference external" href="https://api.reuse.software/info/codebase.helmholtz.cloud/psyplot/psy-reg"><img alt="REUSE status" src="https://api.reuse.software/badge/codebase.helmholtz.cloud/psyplot/psy-reg" /></a></p>
 <p class="rubric">Psyplot plugin for visualizing and calculating regression plots</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page has been automatically generated as has not yet been reviewed by
-the authors of psy-reg!
-Stay tuned for updates and discuss with us at
-<a class="reference external" href="https://codebase.helmholtz.cloud/psyplot/psy-reg">https://codebase.helmholtz.cloud/psyplot/psy-reg</a></p>
-</div>
+</section>
+<section id="psyplot-plugin-for-visualizing-and-calculating-regression-plots">
+<span id="psy-reg"></span><h1>Psyplot plugin for visualizing and calculating regression plots<a class="headerlink" href="#psyplot-plugin-for-visualizing-and-calculating-regression-plots" title="Link to this heading"></a></h1>
+<p>Welcome to the psyplot plugin for visualizating and calculating regression
+plots. This package uses the <a class="reference external" href="https://www.scipy.org/">scipy</a> and <a class="reference external" href="https://www.statsmodels.org/stable/index.html">statsmodels</a> packages to evaluate your
+data, fit a regression to it and visualize it through the <a class="reference external" href="https://psyplot.github.io/psy-simple/">psy-simple</a> plugin.</p>
+<p>It’s plot methods are the <code class="xref py py-attr docutils literal notranslate"><span class="pre">linreg</span></code> and
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">densityreg</span></code> plot methods.</p>
+<p>See the <a class="reference internal" href="plot_methods.html#plot-methods"><span class="std std-ref">psyplot plot methods</span></a> and <a class="reference external" href="https://psyplot.github.io/examples/">examples</a> for more information.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-for-development">Installation for development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-using-conda">Installation using conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-using-pip">Installation using pip</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plot_methods.html">psyplot plot methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/psyplot.project.plot.linreg.html">psyplot.project.plot.linreg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/psyplot.project.plot.densityreg.html">psyplot.project.plot.densityreg</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a><ul>

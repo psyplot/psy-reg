@@ -21,12 +21,25 @@ Welcome to psy-reg's documentation!
 
 .. rubric:: Psyplot plugin for visualizing and calculating regression plots
 
-.. warning::
+.. _psy-reg:
 
-    This page has been automatically generated as has not yet been reviewed by
-    the authors of psy-reg!
-    Stay tuned for updates and discuss with us at
-    https://codebase.helmholtz.cloud/psyplot/psy-reg
+Psyplot plugin for visualizing and calculating regression plots
+===============================================================
+
+Welcome to the psyplot plugin for visualizating and calculating regression
+plots. This package uses the scipy_ and statsmodels_ packages to evaluate your
+data, fit a regression to it and visualize it through the psy-simple_ plugin.
+
+It's plot methods are the :attr:`~psyplot.project.ProjectPlotter.linreg` and
+:attr:`~psyplot.project.ProjectPlotter.densityreg` plot methods.
+
+See the :ref:`plot_methods` and examples_ for more information.
+
+.. _psy-simple: https://psyplot.github.io/psy-simple/
+.. _statsmodels: https://www.statsmodels.org/stable/index.html
+.. _scipy: https://www.scipy.org/
+.. _examples: https://psyplot.github.io/examples/
+
 
 
 .. toctree::
@@ -34,6 +47,7 @@ Welcome to psy-reg's documentation!
    :caption: Contents:
 
    installation
+   plot_methods
    api
    contributing
 
@@ -96,9 +110,8 @@ Indices and tables
    :target: https://codebase.helmholtz.cloud/psyplot/psy-reg/-/graphs/main/charts
 .. |Latest Release| image:: https://codebase.helmholtz.cloud/psyplot/psy-reg/-/badges/release.svg
    :target: https://codebase.helmholtz.cloud/psyplot/psy-reg
-.. .. TODO: uncomment the following line when the package is published at https://pypi.org
-.. .. |PyPI version| image:: https://img.shields.io/pypi/v/psy-reg.svg
-..    :target: https://pypi.python.org/pypi/psy-reg/
+.. |PyPI version| image:: https://img.shields.io/pypi/v/psy-reg.svg
+   :target: https://pypi.python.org/pypi/psy-reg/
 .. |Code style: black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black
 .. |Imports: isort| image:: https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336
@@ -107,6 +120,5 @@ Indices and tables
    :target: https://www.python.org/dev/peps/pep-0008/
 .. |Checked with mypy| image:: http://www.mypy-lang.org/static/mypy_badge.svg
    :target: http://mypy-lang.org/
-.. TODO: uncomment the following line when the package is registered at https://api.reuse.software
-.. .. |REUSE status| image:: https://api.reuse.software/badge/codebase.helmholtz.cloud/psyplot/psy-reg
-..    :target: https://api.reuse.software/info/codebase.helmholtz.cloud/psyplot/psy-reg
+.. |REUSE status| image:: https://api.reuse.software/badge/codebase.helmholtz.cloud/psyplot/psy-reg
+   :target: https://api.reuse.software/info/codebase.helmholtz.cloud/psyplot/psy-reg
