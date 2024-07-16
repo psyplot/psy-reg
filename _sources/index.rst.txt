@@ -104,10 +104,10 @@ Indices and tables
 * :ref:`search`
 
 
-.. |CI| image:: https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/main/pipeline.svg
-   :target: https://codebase.helmholtz.cloud/psyplot/psy-reg/-/pipelines?page=1&scope=all&ref=main
-.. |Code coverage| image:: https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/main/coverage.svg
-   :target: https://codebase.helmholtz.cloud/psyplot/psy-reg/-/graphs/main/charts
+.. |CI| image:: https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/master/pipeline.svg
+   :target: https://codebase.helmholtz.cloud/psyplot/psy-reg/-/pipelines?page=1&scope=all&ref=master
+.. |Code coverage| image:: https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/master/coverage.svg
+   :target: https://codebase.helmholtz.cloud/psyplot/psy-reg/-/graphs/master/charts
 .. |Latest Release| image:: https://codebase.helmholtz.cloud/psyplot/psy-reg/-/badges/release.svg
    :target: https://codebase.helmholtz.cloud/psyplot/psy-reg
 .. |PyPI version| image:: https://img.shields.io/pypi/v/psy-reg.svg
