@@ -7,24 +7,35 @@
 Installation
 ============
 
-.. warning::
+Installation using conda
+^^^^^^^^^^^^^^^^^^^^^^^^
+We highly recommend to use conda_ for installing psy-reg. After downloading
+the `miniconda installer`_, you can install psy-reg simply via::
 
-   This page has been automatically generated as has not yet been reviewed by the
-   authors of psy-reg!
+    $ conda install -c conda-forge psy-reg
 
-To install the `psy-reg` package, we recommend that
-you install it from PyPi via::
+.. _miniconda installer: https://conda.io/en/latest/miniconda.html
+.. _conda: https://docs.conda.io/en/latest/
 
-    pip install psy-reg
+Installation using pip
+^^^^^^^^^^^^^^^^^^^^^^
+If you do not want to use conda for managing your python packages, you can also
+use the python package manager ``pip`` and install via::
 
-Or install it directly from `the source code repository on Gitlab`_ via::
+    $ pip install psy-reg
 
-    pip install git+https://codebase.helmholtz.cloud/psyplot/psy-reg.git
 
-The latter should however only be done if you want to access the development
-versions.
+Dependencies
+------------
+Besides the psyplot_ package, psy-reg uses the regression utilities from
 
-.. _the source code repository on Gitlab: https://codebase.helmholtz.cloud/psyplot/psy-reg
+- statsmodels_: a python package for different statistical models
+- scipy_: The Python-based ecosystem of open-source software for mathematics,
+  science, and engineering
+
+.. _psyplot: https://psyplot.github.io/psyplot/
+.. _statsmodels: https://www.statsmodels.org/stable/index.html
+.. _scipy: https://www.scipy.org/
 
 
 .. _install-develop:

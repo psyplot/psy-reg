@@ -6,17 +6,15 @@ SPDX-License-Identifier: CC-BY-4.0
 
 # psy-reg: Psyplot plugin for visualizing and calculating regression plots
 
-[![CI](https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/main/pipeline.svg)](https://codebase.helmholtz.cloud/psyplot/psy-reg/-/pipelines?page=1&scope=all&ref=main)
-[![Code coverage](https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/main/coverage.svg)](https://codebase.helmholtz.cloud/psyplot/psy-reg/-/graphs/main/charts)
+[![CI](https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/master/pipeline.svg)](https://codebase.helmholtz.cloud/psyplot/psy-reg/-/pipelines?page=1&scope=all&ref=master)
+[![Code coverage](https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/master/coverage.svg)](https://codebase.helmholtz.cloud/psyplot/psy-reg/-/graphs/master/charts)
 [![Latest Release](https://codebase.helmholtz.cloud/psyplot/psy-reg/-/badges/release.svg)](https://codebase.helmholtz.cloud/psyplot/psy-reg)
-<!-- TODO: uncomment the following line when the package is published at https://pypi.org -->
-<!-- [![PyPI version](https://img.shields.io/pypi/v/psy-reg.svg)](https://pypi.python.org/pypi/psy-reg/) -->
+[![PyPI version](https://img.shields.io/pypi/v/psy-reg.svg)](https://pypi.python.org/pypi/psy-reg/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
-<!-- TODO: uncomment the following line when the package is registered at https://api.reuse.software -->
-<!-- [![REUSE status](https://api.reuse.software/badge/codebase.helmholtz.cloud/psyplot/psy-reg)](https://api.reuse.software/info/codebase.helmholtz.cloud/psyplot/psy-reg) -->
+[![REUSE status](https://api.reuse.software/badge/codebase.helmholtz.cloud/psyplot/psy-reg)](https://api.reuse.software/info/codebase.helmholtz.cloud/psyplot/psy-reg)
 
 
 Welcome to the psyplot plugin for visualizating and calculating
