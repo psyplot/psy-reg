@@ -1,4 +1,4 @@
-psyplot.project.plot.linreg
+﻿psyplot.project.plot.linreg
 ===========================
 
 .. currentmodule:: psyplot.project

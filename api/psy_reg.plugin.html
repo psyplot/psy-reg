@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>psy_reg.plugin module &mdash; psy-reg 1.3.0+7.g50fe3e1 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
+  <title>&lt;no title&gt; &mdash; psy-reg  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/nc-table-styles.css?v=d585f46f" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="psy_reg.utils module" href="psy_reg.utils.html" />
-    <link rel="prev" title="psy_reg.plotters module" href="psy_reg.plotters.html" /> 
+    <link rel="next" title="&lt;no title&gt;" href="psy_reg.utils.html" />
+    <link rel="prev" title="Possible types" href="psy_reg.plotters.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -28,32 +33,70 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> psy-reg
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            psy-reg
           </a>
-              <div class="version">
-                1.3.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installing.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../plot_methods.html">psyplot plot methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contributing to psy-reg</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="psy_reg.html">API Reference</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="psy_reg.html#submodules">Submodules</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="psy_reg.plotters.html">psy_reg.plotters module</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">psy_reg.plugin module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="psy_reg.utils.html">psy_reg.utils module</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#installation-for-development">Installation for development</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="psy_reg.html">psy_reg package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="psy_reg.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html"><code class="docutils literal notranslate"><span class="pre">Ci</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.FitPointDensity"><code class="docutils literal notranslate"><span class="pre">FitPointDensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.FixPoint"><code class="docutils literal notranslate"><span class="pre">FixPoint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.IdealLine"><code class="docutils literal notranslate"><span class="pre">IdealLine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.IdealLineColor"><code class="docutils literal notranslate"><span class="pre">IdealLineColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.InitialParameters"><code class="docutils literal notranslate"><span class="pre">InitialParameters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.LinRegTranspose"><code class="docutils literal notranslate"><span class="pre">LinRegTranspose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.NBoot"><code class="docutils literal notranslate"><span class="pre">NBoot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.ParameterBounds"><code class="docutils literal notranslate"><span class="pre">ParameterBounds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.XFitRange"><code class="docutils literal notranslate"><span class="pre">XFitRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.XLineRange"><code class="docutils literal notranslate"><span class="pre">XLineRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.YFitRange"><code class="docutils literal notranslate"><span class="pre">YFitRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.bootstrap"><code class="docutils literal notranslate"><span class="pre">bootstrap()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.plotters.html#psy_reg.plotters.calc_ci"><code class="docutils literal notranslate"><span class="pre">calc_ci()</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">get_versions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.patch_prior_1_0"><code class="docutils literal notranslate"><span class="pre">patch_prior_1_0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.patches"><code class="docutils literal notranslate"><span class="pre">patches</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.rcParams"><code class="docutils literal notranslate"><span class="pre">rcParams</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.validate_callable"><code class="docutils literal notranslate"><span class="pre">validate_callable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.validate_fit"><code class="docutils literal notranslate"><span class="pre">validate_fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.validate_fix"><code class="docutils literal notranslate"><span class="pre">validate_fix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.validate_ideal"><code class="docutils literal notranslate"><span class="pre">validate_ideal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.validate_iter"><code class="docutils literal notranslate"><span class="pre">validate_iter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.validate_line_xlim"><code class="docutils literal notranslate"><span class="pre">validate_line_xlim()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.validate_list"><code class="docutils literal notranslate"><span class="pre">validate_list</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.validate_p0"><code class="docutils literal notranslate"><span class="pre">validate_p0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.validate_param_bounds"><code class="docutils literal notranslate"><span class="pre">validate_param_bounds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#psy_reg.plugin.validate_stringlist"><code class="docutils literal notranslate"><span class="pre">validate_stringlist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.utils.html"><code class="docutils literal notranslate"><span class="pre">GenericModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="psy_reg.utils.html#psy_reg.utils.rsquared"><code class="docutils literal notranslate"><span class="pre">rsquared()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribution and development hints</a></li>
 </ul>
 
         </div>
@@ -69,9 +112,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="psy_reg.html">API Reference</a> &raquo;</li>
-      <li>psy_reg.plugin module</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../api.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="psy_reg.html">psy_reg package</a></li>
+      <li class="breadcrumb-item active">&lt;no title&gt;</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/psy_reg.plugin.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -81,18 +125,70 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-psy_reg.plugin">
-<span id="psy-reg-plugin-module"></span><h1>psy_reg.plugin module<a class="headerlink" href="#module-psy_reg.plugin" title="Permalink to this headline"></a></h1>
-<p>psy-simple psyplot plugin</p>
-<p>This module defines the rcParams for the psy-simple plugin</p>
+  <p id="module-psy_reg.plugin">psy-reg psyplot plugin</p>
+<p>This module defines the rcParams for the psy-reg plugin</p>
+<p><strong>Functions:</strong></p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#psy_reg.plugin.get_versions" title="psy_reg.plugin.get_versions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_versions</span></code></a>([requirements])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#psy_reg.plugin.patch_prior_1_0" title="psy_reg.plugin.patch_prior_1_0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">patch_prior_1_0</span></code></a>(plotter_d, versions)</p></td>
+<td><p>Patch psy_reg plotters for versions smaller than 1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_callable" title="psy_reg.plugin.validate_callable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_callable</span></code></a>(val)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_fit" title="psy_reg.plugin.validate_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_fit</span></code></a>(val)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_fix" title="psy_reg.plugin.validate_fix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_fix</span></code></a>(val)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_ideal" title="psy_reg.plugin.validate_ideal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_ideal</span></code></a>(val)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_iter" title="psy_reg.plugin.validate_iter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_iter</span></code></a>(value)</p></td>
+<td><p>Validate that the given value is an iterable</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_line_xlim" title="psy_reg.plugin.validate_line_xlim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_line_xlim</span></code></a>(val)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_p0" title="psy_reg.plugin.validate_p0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_p0</span></code></a>(value)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_param_bounds" title="psy_reg.plugin.validate_param_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_param_bounds</span></code></a>(value)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_stringlist" title="psy_reg.plugin.validate_stringlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_stringlist</span></code></a>(s)</p></td>
+<td><p>Validate a list of strings</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data:</strong></p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#psy_reg.plugin.patches" title="psy_reg.plugin.patches"><code class="xref py py-obj docutils literal notranslate"><span class="pre">patches</span></code></a></p></td>
+<td><p>patches to apply when loading a project</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Classes:</strong></p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_list" title="psy_reg.plugin.validate_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_list</span></code></a>([dtype, length, listtype])</p></td>
+<td><p>Validate a list of the specified <cite>dtype</cite></p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.get_versions">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">get_versions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">requirements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#get_versions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.get_versions" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">get_versions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">requirements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.get_versions" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.patch_prior_1_0">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">patch_prior_1_0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotter_d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">versions</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#patch_prior_1_0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.patch_prior_1_0" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">patch_prior_1_0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plotter_d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">versions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.patch_prior_1_0" title="Link to this definition"></a></dt>
 <dd><p>Patch psy_reg plotters for versions smaller than 1.0</p>
 <p>Before psyplot 1.0.0, the plotters in the psy_reg package where part of the
 psyplot.plotter.linreg module. This has to be corrected</p>
@@ -100,116 +196,142 @@ psyplot.plotter.linreg module. This has to be corrected</p>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="psy_reg.plugin.patches">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">patches</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{('psyplot.plotter.linreg',</span> <span class="pre">'DensityRegPlotter'):</span> <span class="pre">&lt;function</span> <span class="pre">patch_prior_1_0&gt;,</span> <span class="pre">('psyplot.plotter.linreg',</span> <span class="pre">'LinRegPlotter'):</span> <span class="pre">&lt;function</span> <span class="pre">patch_prior_1_0&gt;}</span></em><a class="headerlink" href="#psy_reg.plugin.patches" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">patches</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{('psyplot.plotter.linreg',</span> <span class="pre">'DensityRegPlotter'):</span> <span class="pre">&lt;function</span> <span class="pre">patch_prior_1_0&gt;,</span> <span class="pre">('psyplot.plotter.linreg',</span> <span class="pre">'LinRegPlotter'):</span> <span class="pre">&lt;function</span> <span class="pre">patch_prior_1_0&gt;}</span></em><a class="headerlink" href="#psy_reg.plugin.patches" title="Link to this definition"></a></dt>
 <dd><p>patches to apply when loading a project</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="psy_reg.plugin.rcParams">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">rcParams</span></span><a class="headerlink" href="#psy_reg.plugin.rcParams" title="Permalink to this definition"></a></dt>
-<dd><p>the <a class="reference external" href="https://psyplot.github.io/psyplot/api/psyplot.config.rcsetup.html#psyplot.config.rcsetup.RcParams" title="(in psyplot v1.3.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">RcParams</span></code></a> for the psy-reg plugin</p>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">rcParams</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'plotter.densityreg.lineplot':</span> <span class="pre">'-',</span> <span class="pre">'plotter.linreg.bootstrap.random_seed':</span> <span class="pre">None,</span> <span class="pre">'plotter.linreg.ci':</span> <span class="pre">95.0,</span> <span class="pre">'plotter.linreg.fit':</span> <span class="pre">['fit'],</span> <span class="pre">'plotter.linreg.fix':</span> <span class="pre">[None],</span> <span class="pre">'plotter.linreg.id_color':</span> <span class="pre">None,</span> <span class="pre">'plotter.linreg.ideal':</span> <span class="pre">None,</span> <span class="pre">'plotter.linreg.line_xlim':</span> <span class="pre">[('minmax',</span> <span class="pre">'minmax')],</span> <span class="pre">'plotter.linreg.nboot':</span> <span class="pre">1000,</span> <span class="pre">'plotter.linreg.p0':</span> <span class="pre">['auto'],</span> <span class="pre">'plotter.linreg.param_bounds':</span> <span class="pre">[None],</span> <span class="pre">'plotter.linreg.xrange':</span> <span class="pre">('minmax',</span> <span class="pre">'minmax'),</span> <span class="pre">'plotter.linreg.yrange':</span> <span class="pre">('minmax',</span> <span class="pre">'minmax'),</span> <span class="pre">'project.plotters':</span> <span class="pre">{'densityreg':</span> <span class="pre">{'default_slice':</span> <span class="pre">None,</span> <span class="pre">'module':</span> <span class="pre">'psy_reg.plotters',</span> <span class="pre">'plotter_name':</span> <span class="pre">'DensityRegPlotter',</span> <span class="pre">'plugin':</span> <span class="pre">'psy_reg.plugin',</span> <span class="pre">'prefer_list':</span> <span class="pre">False,</span> <span class="pre">'summary':</span> <span class="pre">'Make</span> <span class="pre">a</span> <span class="pre">density</span> <span class="pre">plot</span> <span class="pre">and</span> <span class="pre">draw</span> <span class="pre">a</span> <span class="pre">fit</span> <span class="pre">from</span> <span class="pre">x</span> <span class="pre">to</span> <span class="pre">y</span> <span class="pre">of</span> <span class="pre">points'},</span> <span class="pre">'linreg':</span> <span class="pre">{'default_slice':</span> <span class="pre">None,</span> <span class="pre">'module':</span> <span class="pre">'psy_reg.plotters',</span> <span class="pre">'plotter_name':</span> <span class="pre">'LinRegPlotter',</span> <span class="pre">'plugin':</span> <span class="pre">'psy_reg.plugin',</span> <span class="pre">'prefer_list':</span> <span class="pre">True,</span> <span class="pre">'summary':</span> <span class="pre">'Draw</span> <span class="pre">a</span> <span class="pre">fit</span> <span class="pre">from</span> <span class="pre">x</span> <span class="pre">to</span> <span class="pre">y'}}}</span></em><a class="headerlink" href="#psy_reg.plugin.rcParams" title="Link to this definition"></a></dt>
+<dd><p>the <code class="xref py py-class docutils literal notranslate"><span class="pre">RcParams</span></code> for the psy-reg plugin</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_callable">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_callable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#validate_callable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.validate_callable" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_callable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.validate_callable" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_fit">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#validate_fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.validate_fit" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.validate_fit" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_fix">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#validate_fix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.validate_fix" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.validate_fix" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_ideal">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_ideal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#validate_ideal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.validate_ideal" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_ideal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.validate_ideal" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_iter">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_iter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#validate_iter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.validate_iter" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_iter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.validate_iter" title="Link to this definition"></a></dt>
 <dd><p>Validate that the given value is an iterable</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_line_xlim">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_line_xlim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#validate_line_xlim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.validate_line_xlim" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_line_xlim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.validate_line_xlim" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_list">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">dtype=None</span></em>, <em class="sig-param"><span class="pre">length=None</span></em>, <em class="sig-param"><span class="pre">listtype=&lt;class</span> <span class="pre">'list'&gt;</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#validate_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.validate_list" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">listtype=&lt;class</span> <span class="pre">'list'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.validate_list" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Validate a list of the specified <cite>dtype</cite></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dtype</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><em>object</em></a>) – A datatype (e.g. <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) that shall be used for the conversion</p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dtype</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><em>object</em></a>) – A datatype (e.g. <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) that shall be used for the conversion</p>
 </dd>
 </dl>
-<p>Initialization function</p>
+<p><strong>Attributes:</strong></p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#psy_reg.plugin.validate_list.dtype" title="psy_reg.plugin.validate_list.dtype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dtype</span></code></a></p></td>
+<td><p>data type (e.g. <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) used for the conversion.</p></td>
+</tr>
+</tbody>
+</table>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_list.dtype">
-<span class="sig-name descname"><span class="pre">dtype</span></span><a class="headerlink" href="#psy_reg.plugin.validate_list.dtype" title="Permalink to this definition"></a></dt>
-<dd><p>data type (e.g. <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) used for the conversion</p>
+<span class="sig-name descname"><span class="pre">dtype</span></span><a class="headerlink" href="#psy_reg.plugin.validate_list.dtype" title="Link to this definition"></a></dt>
+<dd><p>data type (e.g. <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) used for the conversion</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_p0">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_p0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#validate_p0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.validate_p0" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_p0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.validate_p0" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_param_bounds">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_param_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#validate_param_bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.validate_param_bounds" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_param_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.validate_param_bounds" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="psy_reg.plugin.validate_stringlist">
-<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_stringlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/psy_reg/plugin.html#validate_stringlist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#psy_reg.plugin.validate_stringlist" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">psy_reg.plugin.</span></span><span class="sig-name descname"><span class="pre">validate_stringlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psy_reg.plugin.validate_stringlist" title="Link to this definition"></a></dt>
 <dd><p>Validate a list of strings</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>val</strong> (<em>iterable of strings</em>) – </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>iterable</em><em> of </em><em>strings</em>)</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>list of str</p>
 </dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a></p>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)">list</a></p>
 </dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – </p>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.12)"><strong>ValueError</strong></a> – </p>
 </dd>
 </dl>
 </dd></dl>
 
-</section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="psy_reg.plotters.html" class="btn btn-neutral float-left" title="psy_reg.plotters module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="psy_reg.utils.html" class="btn btn-neutral float-right" title="psy_reg.utils module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <!--
+SPDX-FileCopyrightText: 2021-2024 Helmholtz-Zentrum hereon GmbH
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
+<footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="psy_reg.plotters.html" class="btn btn-neutral float-left" title="Possible types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="psy_reg.utils.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021 Helmholtz-Zentrum Hereon, 2020-2021 Helmholtz-Zentrum Geesthacht, 2016-2021 University of Lausanne.</p>
+    <p>&#169; Copyright 2021-2024 Helmholtz-Zentrum hereon GmbH.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+  
+
+<div class="footer">
+    <span class="creativecommons">
+    <a href="https://creativecommons.org/licenses/by/4.0/" >
+    <img style="height: 1.5em;" src="../_static/license_logo.png" border="0" alt="Creative Commons License"/>
+    </a>
+    This documentation is licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/">
+    CC-BY-4.0
+    </a>
+    </span>
+</div>
+
+
 
 </footer>
         </div>

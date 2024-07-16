@@ -1,6 +1,3 @@
-psy\_reg.utils module
-=====================
-
 .. automodule:: psy_reg.utils
    :members:
    :undoc-members:

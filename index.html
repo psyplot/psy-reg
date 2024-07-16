@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Psyplot plugin for visualizing and calculating regression plots &mdash; psy-reg 1.3.0+7.g50fe3e1 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/plot_directive.css" type="text/css" />
+  <title>Welcome to psy-reg’s documentation! &mdash; psy-reg  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/nc-table-styles.css?v=d585f46f" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/design-tabs.js?v=f930bc37"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="installing.html" /> 
+    <link rel="next" title="Installation" href="installation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -27,24 +33,70 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> psy-reg
+
+          
+          
+          <a href="#" class="icon icon-home">
+            psy-reg
           </a>
-              <div class="version">
-                1.3.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="installing.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plot_methods.html">psyplot plot methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contributing to psy-reg</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api/psy_reg.html">API Reference</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-for-development">Installation for development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/psy_reg.html">psy_reg package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html"><code class="docutils literal notranslate"><span class="pre">Ci</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity"><code class="docutils literal notranslate"><span class="pre">FitPointDensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FixPoint"><code class="docutils literal notranslate"><span class="pre">FixPoint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine"><code class="docutils literal notranslate"><span class="pre">IdealLine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLineColor"><code class="docutils literal notranslate"><span class="pre">IdealLineColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters"><code class="docutils literal notranslate"><span class="pre">InitialParameters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegTranspose"><code class="docutils literal notranslate"><span class="pre">LinRegTranspose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.NBoot"><code class="docutils literal notranslate"><span class="pre">NBoot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.ParameterBounds"><code class="docutils literal notranslate"><span class="pre">ParameterBounds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XFitRange"><code class="docutils literal notranslate"><span class="pre">XFitRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XLineRange"><code class="docutils literal notranslate"><span class="pre">XLineRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.YFitRange"><code class="docutils literal notranslate"><span class="pre">YFitRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.bootstrap"><code class="docutils literal notranslate"><span class="pre">bootstrap()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.calc_ci"><code class="docutils literal notranslate"><span class="pre">calc_ci()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html"><code class="docutils literal notranslate"><span class="pre">get_versions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.patch_prior_1_0"><code class="docutils literal notranslate"><span class="pre">patch_prior_1_0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.patches"><code class="docutils literal notranslate"><span class="pre">patches</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.rcParams"><code class="docutils literal notranslate"><span class="pre">rcParams</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_callable"><code class="docutils literal notranslate"><span class="pre">validate_callable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_fit"><code class="docutils literal notranslate"><span class="pre">validate_fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_fix"><code class="docutils literal notranslate"><span class="pre">validate_fix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_ideal"><code class="docutils literal notranslate"><span class="pre">validate_ideal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_iter"><code class="docutils literal notranslate"><span class="pre">validate_iter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_line_xlim"><code class="docutils literal notranslate"><span class="pre">validate_line_xlim()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_list"><code class="docutils literal notranslate"><span class="pre">validate_list</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_p0"><code class="docutils literal notranslate"><span class="pre">validate_p0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_param_bounds"><code class="docutils literal notranslate"><span class="pre">validate_param_bounds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_stringlist"><code class="docutils literal notranslate"><span class="pre">validate_stringlist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html"><code class="docutils literal notranslate"><span class="pre">GenericModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.rsquared"><code class="docutils literal notranslate"><span class="pre">rsquared()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution and development hints</a></li>
 </ul>
 
         </div>
@@ -60,8 +112,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>Psyplot plugin for visualizing and calculating regression plots</li>
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to psy-reg’s documentation!</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -71,65 +123,186 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="psyplot-plugin-for-visualizing-and-calculating-regression-plots">
-<span id="psy-reg"></span><h1>Psyplot plugin for visualizing and calculating regression plots<a class="headerlink" href="#psyplot-plugin-for-visualizing-and-calculating-regression-plots" title="Permalink to this headline"></a></h1>
-<p>Welcome to the psyplot plugin for visualizating and calculating regression
-plots. This package uses the <a class="reference external" href="https://www.scipy.org/">scipy</a> and <a class="reference external" href="https://www.statsmodels.org/stable/index.html">statsmodels</a> packages to evaluate your
-data, fit a regression to it and visualize it through the <a class="reference external" href="https://psyplot.github.io/psy-simple/">psy-simple</a> plugin.</p>
-<p>It’s plot methods are the <code class="xref py py-attr docutils literal notranslate"><span class="pre">linreg</span></code> and
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">densityreg</span></code> plot methods.</p>
-<p>See the <a class="reference internal" href="plot_methods.html#plot-methods"><span class="std std-ref">psyplot plot methods</span></a> and <a class="reference external" href="https://psyplot.github.io/examples/">examples</a> for more information.</p>
-<table class="colwidths-given docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><th class="stub"><p>docs</p></th>
-<td><p><a class="reference external" href="http://psyplot.github.io/psy-reg/"><img alt="Documentation" src="https://img.shields.io/github/deployments/psyplot/psy-reg/github-pages" /></a></p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>tests</p></th>
-<td><p><a class="reference external" href="https://circleci.com/gh/psyplot/psy-reg/tree/master"><img alt="CircleCI" src="https://circleci.com/gh/psyplot/psy-reg/tree/master.svg?style=svg" /></a> <a class="reference external" href="https://ci.appveyor.com/project/psyplot/psy-reg"><img alt="AppVeyor" src="https://ci.appveyor.com/api/projects/status/48pqaquat9bennac/branch/master?svg=true" /></a> <a class="reference external" href="https://codecov.io/gh/psyplot/psy-reg"><img alt="Coverage" src="https://codecov.io/gh/psyplot/psy-reg/branch/master/graph/badge.svg" /></a></p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>package</p></th>
-<td><p><a class="reference external" href="https://pypi.python.org/pypi/psy-reg"><img alt="PyPI Package latest release" src="https://img.shields.io/pypi/v/psy-reg.svg?style=flat" /></a> <a class="reference external" href="https://anaconda.org/conda-forge/psy-reg"><img alt="conda" src="https://anaconda.org/conda-forge/psy-reg/badges/version.svg" /></a> <a class="reference external" href="https://github.com/psyplot/psy-reg/releases/latest"><img alt="Latest github release" src="https://img.shields.io/github/release/psyplot/psy-reg.svg" /></a> <a class="reference external" href="https://zenodo.org/badge/latestdoi/83479056"><img alt="Zenodo" src="https://zenodo.org/badge/83479056.svg" /></a></p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>implementations</p></th>
-<td><p><a class="reference external" href="https://pypi.python.org/pypi/psy-reg"><img alt="Supported versions" src="https://img.shields.io/pypi/pyversions/psy-reg.svg?style=flat" /></a> <a class="reference external" href="https://pypi.python.org/pypi/psy-reg"><img alt="Supported implementations" src="https://img.shields.io/pypi/implementation/psy-reg.svg?style=flat" /></a></p></td>
-</tr>
-</tbody>
-</table>
-<section id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline"></a></h2>
+  <section id="welcome-to-psy-reg-s-documentation">
+<h1>Welcome to psy-reg’s documentation!<a class="headerlink" href="#welcome-to-psy-reg-s-documentation" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="https://codebase.helmholtz.cloud/psyplot/psy-reg/-/pipelines?page=1&amp;scope=all&amp;ref=main"><img alt="CI" src="https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/main/pipeline.svg" /></a>
+<a class="reference external" href="https://codebase.helmholtz.cloud/psyplot/psy-reg/-/graphs/main/charts"><img alt="Code coverage" src="https://codebase.helmholtz.cloud/psyplot/psy-reg/badges/main/coverage.svg" /></a>
+<a class="reference external" href="https://codebase.helmholtz.cloud/psyplot/psy-reg"><img alt="Latest Release" src="https://codebase.helmholtz.cloud/psyplot/psy-reg/-/badges/release.svg" /></a>
+<a href="#id1"><span class="problematic" id="id2">|PyPI version|</span></a>
+<a class="reference external" href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" /></a>
+<a class="reference external" href="https://pycqa.github.io/isort/"><img alt="Imports: isort" src="https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&amp;labelColor=ef8336" /></a>
+<a class="reference external" href="https://www.python.org/dev/peps/pep-0008/"><img alt="PEP8" src="https://img.shields.io/badge/code%20style-pep8-orange.svg" /></a>
+<a class="reference external" href="http://mypy-lang.org/"><img alt="Checked with mypy" src="http://www.mypy-lang.org/static/mypy_badge.svg" /></a>
+<a href="#id3"><span class="problematic" id="id4">|REUSE status|</span></a></p>
+<p class="rubric">Psyplot plugin for visualizing and calculating regression plots</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page has been automatically generated as has not yet been reviewed by
+the authors of psy-reg!
+Stay tuned for updates and discuss with us at
+<a class="reference external" href="https://codebase.helmholtz.cloud/psyplot/psy-reg">https://codebase.helmholtz.cloud/psyplot/psy-reg</a></p>
+</div>
 <div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="installing.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plot_methods.html">psyplot plot methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contributing to psy-reg</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api/psy_reg.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-for-development">Installation for development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/psy_reg.html">psy_reg package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution and development hints</a></li>
 </ul>
 </div>
+<section id="how-to-cite-this-software">
+<h2>How to cite this software<a class="headerlink" href="#how-to-cite-this-software" title="Link to this heading"></a></h2>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Please do cite this software!</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+APA</label><div class="sd-tab-content docutils">
+<p class="sd-card-text"><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Sommer P.S. psy-reg: Psyplot plugin for statistical plots DOI: 10.5281/zenodo.845647 URL: https://github.com/psyplot/psyplot
+</pre></div>
+</div>
+</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+BibTex</label><div class="sd-tab-content docutils">
+<p class="sd-card-text"><div class="highlight-bibtex notranslate"><div class="highlight"><pre><span></span><span class="nc">@misc</span><span class="p">{</span><span class="nl">YourReferenceHere</span><span class="p">,</span>
+<span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Sommer, Philipp S.}</span><span class="p">,</span>
+<span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.5281/zenodo.845647}</span><span class="p">,</span>
+<span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{psy-reg: Psyplot plugin for statistical plots}</span><span class="p">,</span>
+<span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://github.com/psyplot/psyplot}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+RIS</label><div class="sd-tab-content docutils">
+<p class="sd-card-text"><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>TY  - GEN
+AU  - Sommer, Philipp S.
+DO  - 10.5281/zenodo.845647
+KW  - psyplot
+KW  - python
+KW  - visualization
+KW  - xarray
+KW  - matplotlib
+KW  - netcdf4
+KW  - statistics
+KW  - regression
+TI  - psy-reg: Psyplot plugin for statistical plots
+UR  - https://github.com/psyplot/psyplot
+ER
+</pre></div>
+</div>
+</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Endnote</label><div class="sd-tab-content docutils">
+<p class="sd-card-text"><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>%0 Generic
+%A Sommer, Philipp S.
+%K psyplot
+%K python
+%K visualization
+%K xarray
+%K matplotlib
+%K netcdf4
+%K statistics
+%K regression
+%R 10.5281/zenodo.845647
+%T psy-reg: Psyplot plugin for statistical plots
+%U https://github.com/psyplot/psyplot
+</pre></div>
+</div>
+</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+CFF</label><div class="sd-tab-content docutils">
+<p class="sd-card-text"><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># SPDX-FileCopyrightText: 2021-2024 Helmholtz-Zentrum hereon GmbH</span>
+<span class="c1"># SPDX-FileCopyrightText: 2020-2021 Helmholtz-Zentrum Geesthacht</span>
+<span class="c1"># SPDX-FileCopyrightText: 2016-2024 University of Lausanne</span>
+<span class="c1">#</span>
+<span class="c1"># SPDX-License-Identifier: CC0-1.0</span>
+
+<span class="c1"># YAML 1.2</span>
+<span class="nn">---</span>
+<span class="nt">cff-version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1.2.0&quot;</span>
+<span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;If</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">software,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">cite</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">article</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">preferred-citation</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">software</span><span class="nv"> </span><span class="s">itself.&quot;</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;psy-reg:</span><span class="nv"> </span><span class="s">Psyplot</span><span class="nv"> </span><span class="s">plugin</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">statistical</span><span class="nv"> </span><span class="s">plots&quot;</span>
+<span class="nt">authors</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sommer</span>
+<span class="w">    </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Philipp</span><span class="nv"> </span><span class="s">S.&quot;</span>
+<span class="w">    </span><span class="nt">affiliation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Helmholtz-Zentrum</span><span class="nv"> </span><span class="s">Hereon&quot;</span>
+<span class="w">    </span><span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://orcid.org/0000-0001-6171-7716&quot;</span>
+<span class="w">    </span><span class="nt">website</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://www.philipp-s-sommer.de&quot;</span>
+<span class="w">    </span><span class="nt">post-code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">21502</span>
+<span class="w">    </span><span class="nt">city</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Geesthacht</span>
+<span class="w">    </span><span class="nt">country</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DE</span>
+<span class="w">    </span><span class="nt">email</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">philipp.sommer@hereon.de</span>
+<span class="nt">doi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10.5281/zenodo.845647&quot;</span>
+<span class="nt">contact</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">email</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psyplot@hereon.de</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Psyplot</span><span class="nv"> </span><span class="s">developers</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">hereon&quot;</span>
+<span class="nt">license</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LGPL-3.0-only&quot;</span>
+<span class="nt">repository-code</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/psyplot/psyplot</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">software</span>
+<span class="nt">keywords</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psyplot</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">visualization</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xarray</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matplotlib</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">netcdf4</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statistics</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">regression</span>
+<span class="nt">preferred-citation</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;The</span><span class="nv"> </span><span class="s">psyplot</span><span class="nv"> </span><span class="s">interactive</span><span class="nv"> </span><span class="s">visualization</span><span class="nv"> </span><span class="s">framework&quot;</span>
+<span class="w">  </span><span class="nt">authors</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sommer</span>
+<span class="w">      </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Philipp</span><span class="nv"> </span><span class="s">S.&quot;</span>
+<span class="w">      </span><span class="nt">affiliation</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Helmholtz-Zentrum</span><span class="nv"> </span><span class="s">Hereon&quot;</span>
+<span class="w">      </span><span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://orcid.org/0000-0001-6171-7716&quot;</span>
+<span class="w">  </span><span class="nt">year</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2017</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">article</span>
+<span class="w">  </span><span class="nt">doi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10.21105/joss.00363&quot;</span>
+<span class="w">  </span><span class="nt">date-published</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2017-08-22</span>
+<span class="w">  </span><span class="nt">journal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Journal of Open Source Software</span>
+<span class="w">  </span><span class="nt">volume</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="w">  </span><span class="nt">number</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span>
+<span class="w">  </span><span class="nt">pages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">363</span>
+<span class="w">  </span><span class="nt">publisher</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Open Journal</span>
+<span class="w">  </span><span class="nt">license</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CC-BY-4.0</span>
+<span class="nn">...</span>
+</pre></div>
+</div>
+</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="copyright">
-<h2>Copyright<a class="headerlink" href="#copyright" title="Permalink to this headline"></a></h2>
-<p>Copyright © 2021 Helmholtz-Zentrum Hereon, 2020-2021 Helmholtz-Zentrum
-Geesthacht, 2016-2021 University of Lausanne</p>
-<p>psy-reg is released under the GNU LGPL-3.O license.
-See COPYING and COPYING.LESSER in the root of the repository for full
-licensing details.</p>
-<p>This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License version 3.0 as
-published by the Free Software Foundation.</p>
-<p>This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU LGPL-3.0 license for more details.</p>
-<p>You should have received a copy of the GNU LGPL-3.0 license
-along with this program.  If not, see <a class="reference external" href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>.</p>
+<section id="license-information">
+<h2>License information<a class="headerlink" href="#license-information" title="Link to this heading"></a></h2>
+<p>Copyright © 2021-2024 Helmholtz-Zentrum hereon GmbH</p>
+<p>The source code of psy-reg is licensed under
+LGPL-3.0-only.</p>
+<p>If not stated otherwise, the contents of this documentation is licensed under
+CC-BY-4.0.</p>
 </section>
 </section>
 <section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h1>
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
@@ -140,20 +313,40 @@ along with this program.  If not, see <a class="reference external" href="https:
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installing.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <!--
+SPDX-FileCopyrightText: 2021-2024 Helmholtz-Zentrum hereon GmbH
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
+<footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021 Helmholtz-Zentrum Hereon, 2020-2021 Helmholtz-Zentrum Geesthacht, 2016-2021 University of Lausanne.</p>
+    <p>&#169; Copyright 2021-2024 Helmholtz-Zentrum hereon GmbH.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+  
+
+<div class="footer">
+    <span class="creativecommons">
+    <a href="https://creativecommons.org/licenses/by/4.0/" >
+    <img style="height: 1.5em;" src="_static/license_logo.png" border="0" alt="Creative Commons License"/>
+    </a>
+    This documentation is licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/">
+    CC-BY-4.0
+    </a>
+    </span>
+</div>
+
+
 
 </footer>
         </div>

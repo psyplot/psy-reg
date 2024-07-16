@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Reference &mdash; psy-reg  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/nc-table-styles.css?v=d585f46f" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/design-tabs.js?v=f930bc37"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="psy_reg package" href="api/psy_reg.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            psy-reg
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-for-development">Installation for development</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/psy_reg.html">psy_reg package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html"><code class="docutils literal notranslate"><span class="pre">Ci</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity"><code class="docutils literal notranslate"><span class="pre">FitPointDensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FixPoint"><code class="docutils literal notranslate"><span class="pre">FixPoint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine"><code class="docutils literal notranslate"><span class="pre">IdealLine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLineColor"><code class="docutils literal notranslate"><span class="pre">IdealLineColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters"><code class="docutils literal notranslate"><span class="pre">InitialParameters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegTranspose"><code class="docutils literal notranslate"><span class="pre">LinRegTranspose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.NBoot"><code class="docutils literal notranslate"><span class="pre">NBoot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.ParameterBounds"><code class="docutils literal notranslate"><span class="pre">ParameterBounds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XFitRange"><code class="docutils literal notranslate"><span class="pre">XFitRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XLineRange"><code class="docutils literal notranslate"><span class="pre">XLineRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.YFitRange"><code class="docutils literal notranslate"><span class="pre">YFitRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.bootstrap"><code class="docutils literal notranslate"><span class="pre">bootstrap()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.calc_ci"><code class="docutils literal notranslate"><span class="pre">calc_ci()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html"><code class="docutils literal notranslate"><span class="pre">get_versions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.patch_prior_1_0"><code class="docutils literal notranslate"><span class="pre">patch_prior_1_0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.patches"><code class="docutils literal notranslate"><span class="pre">patches</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.rcParams"><code class="docutils literal notranslate"><span class="pre">rcParams</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_callable"><code class="docutils literal notranslate"><span class="pre">validate_callable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_fit"><code class="docutils literal notranslate"><span class="pre">validate_fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_fix"><code class="docutils literal notranslate"><span class="pre">validate_fix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_ideal"><code class="docutils literal notranslate"><span class="pre">validate_ideal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_iter"><code class="docutils literal notranslate"><span class="pre">validate_iter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_line_xlim"><code class="docutils literal notranslate"><span class="pre">validate_line_xlim()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_list"><code class="docutils literal notranslate"><span class="pre">validate_list</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_p0"><code class="docutils literal notranslate"><span class="pre">validate_p0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_param_bounds"><code class="docutils literal notranslate"><span class="pre">validate_param_bounds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_stringlist"><code class="docutils literal notranslate"><span class="pre">validate_stringlist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html"><code class="docutils literal notranslate"><span class="pre">GenericModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.rsquared"><code class="docutils literal notranslate"><span class="pre">rsquared()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution and development hints</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">psy-reg</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-reference">
+<span id="api"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/psy_reg.html">psy_reg package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/psy_reg.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html"><code class="docutils literal notranslate"><span class="pre">Ci</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.Ci.dependencies"><code class="docutils literal notranslate"><span class="pre">Ci.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.Ci.fit"><code class="docutils literal notranslate"><span class="pre">Ci.fit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.Ci.fix"><code class="docutils literal notranslate"><span class="pre">Ci.fix</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.Ci.group"><code class="docutils literal notranslate"><span class="pre">Ci.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.Ci.initialize_plot"><code class="docutils literal notranslate"><span class="pre">Ci.initialize_plot()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.Ci.name"><code class="docutils literal notranslate"><span class="pre">Ci.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.Ci.nboot"><code class="docutils literal notranslate"><span class="pre">Ci.nboot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.Ci.priority"><code class="docutils literal notranslate"><span class="pre">Ci.priority</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.Ci.transpose"><code class="docutils literal notranslate"><span class="pre">Ci.transpose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.Ci.update"><code class="docutils literal notranslate"><span class="pre">Ci.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.bins"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.bins</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.cbar"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.cbar</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ci"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.ci</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.clabel"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.clabel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.color"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.density"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.density</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.error"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.error</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.erroralpha"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.erroralpha</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.fit"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.fit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.fix"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.fix</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.id_color"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.id_color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ideal"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.ideal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.labelprops"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.labelprops</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.labelsize"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.labelsize</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.labelweight"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.labelweight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.legend"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.legend</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.legendlabels"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.legendlabels</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.line_xlim"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.line_xlim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.lineplot"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.lineplot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.nboot"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.nboot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.normed"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.normed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.p0"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.p0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.param_bounds"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.param_bounds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.plot"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.plot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.post"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.post</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.post_timing"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.post_timing</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.precision"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.precision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ticksize"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.ticksize</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.tickweight"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.tickweight</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.title"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.title</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.transpose"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.transpose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xlabel"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.xlabel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xlim"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.xlim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xrange"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.xrange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xrotation"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.xrotation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xticklabels"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.xticklabels</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xtickprops"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.xtickprops</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xticks"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.xticks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ylabel"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.ylabel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ylim"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.ylim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.yrange"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.yrange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.yrotation"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.yrotation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.yticklabels"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.yticklabels</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ytickprops"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.ytickprops</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.yticks"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter.yticks</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity"><code class="docutils literal notranslate"><span class="pre">FitPointDensity</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity.bins"><code class="docutils literal notranslate"><span class="pre">FitPointDensity.bins</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity.children"><code class="docutils literal notranslate"><span class="pre">FitPointDensity.children</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity.coord"><code class="docutils literal notranslate"><span class="pre">FitPointDensity.coord</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity.line_xlim"><code class="docutils literal notranslate"><span class="pre">FitPointDensity.line_xlim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity.normed"><code class="docutils literal notranslate"><span class="pre">FitPointDensity.normed</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity.precision"><code class="docutils literal notranslate"><span class="pre">FitPointDensity.precision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity.xrange"><code class="docutils literal notranslate"><span class="pre">FitPointDensity.xrange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity.yrange"><code class="docutils literal notranslate"><span class="pre">FitPointDensity.yrange</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FixPoint"><code class="docutils literal notranslate"><span class="pre">FixPoint</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FixPoint.connections"><code class="docutils literal notranslate"><span class="pre">FixPoint.connections</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FixPoint.fit"><code class="docutils literal notranslate"><span class="pre">FixPoint.fit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FixPoint.group"><code class="docutils literal notranslate"><span class="pre">FixPoint.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FixPoint.name"><code class="docutils literal notranslate"><span class="pre">FixPoint.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FixPoint.priority"><code class="docutils literal notranslate"><span class="pre">FixPoint.priority</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.FixPoint.update"><code class="docutils literal notranslate"><span class="pre">FixPoint.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine"><code class="docutils literal notranslate"><span class="pre">IdealLine</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine.dependencies"><code class="docutils literal notranslate"><span class="pre">IdealLine.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine.fit"><code class="docutils literal notranslate"><span class="pre">IdealLine.fit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine.group"><code class="docutils literal notranslate"><span class="pre">IdealLine.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine.id_color"><code class="docutils literal notranslate"><span class="pre">IdealLine.id_color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine.initialize_plot"><code class="docutils literal notranslate"><span class="pre">IdealLine.initialize_plot()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine.plot"><code class="docutils literal notranslate"><span class="pre">IdealLine.plot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine.remove"><code class="docutils literal notranslate"><span class="pre">IdealLine.remove()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLine.update"><code class="docutils literal notranslate"><span class="pre">IdealLine.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLineColor"><code class="docutils literal notranslate"><span class="pre">IdealLineColor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLineColor.color"><code class="docutils literal notranslate"><span class="pre">IdealLineColor.color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLineColor.dependencies"><code class="docutils literal notranslate"><span class="pre">IdealLineColor.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLineColor.ideal"><code class="docutils literal notranslate"><span class="pre">IdealLineColor.ideal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLineColor.parents"><code class="docutils literal notranslate"><span class="pre">IdealLineColor.parents</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLineColor.priority"><code class="docutils literal notranslate"><span class="pre">IdealLineColor.priority</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.IdealLineColor.update"><code class="docutils literal notranslate"><span class="pre">IdealLineColor.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters"><code class="docutils literal notranslate"><span class="pre">InitialParameters</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters.connections"><code class="docutils literal notranslate"><span class="pre">InitialParameters.connections</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters.data_dependent"><code class="docutils literal notranslate"><span class="pre">InitialParameters.data_dependent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters.dependencies"><code class="docutils literal notranslate"><span class="pre">InitialParameters.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters.fit"><code class="docutils literal notranslate"><span class="pre">InitialParameters.fit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters.group"><code class="docutils literal notranslate"><span class="pre">InitialParameters.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters.name"><code class="docutils literal notranslate"><span class="pre">InitialParameters.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters.p0"><code class="docutils literal notranslate"><span class="pre">InitialParameters.p0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters.param_bounds"><code class="docutils literal notranslate"><span class="pre">InitialParameters.param_bounds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters.priority"><code class="docutils literal notranslate"><span class="pre">InitialParameters.priority</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters.update"><code class="docutils literal notranslate"><span class="pre">InitialParameters.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.allowed_vars"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.allowed_vars</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.ci"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.ci</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.fit"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.fit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.fix"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.fix</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.id_color"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.id_color</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.ideal"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.ideal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.line_xlim"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.line_xlim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.nboot"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.nboot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.p0"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.p0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.param_bounds"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.param_bounds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.transpose"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.transpose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.xrange"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.xrange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter.yrange"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter.yrange</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegTranspose"><code class="docutils literal notranslate"><span class="pre">LinRegTranspose</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinRegTranspose.priority"><code class="docutils literal notranslate"><span class="pre">LinRegTranspose.priority</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.coord"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.coord</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.data_dependent"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.data_dependent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.dependencies"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.fix"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.fix</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.func_args"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.func_args</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.get_kwargs"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.get_kwargs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.get_xline"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.get_xline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.get_xy"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.get_xy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.group"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.line_xlim"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.line_xlim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.make_fit"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.make_fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.name"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.p0"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.p0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.param_bounds"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.param_bounds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.priority"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.priority</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.set_method"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.set_method()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.transpose"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.transpose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.update"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.xrange"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.xrange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit.yrange"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit.yrange</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined.coord"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined.coord</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined.fix"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined.fix</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined.line_xlim"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined.line_xlim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined.p0"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined.p0</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined.param_bounds"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined.param_bounds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined.set_data"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined.set_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined.transpose"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined.transpose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined.xrange"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined.xrange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined.yrange"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined.yrange</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.NBoot"><code class="docutils literal notranslate"><span class="pre">NBoot</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.NBoot.group"><code class="docutils literal notranslate"><span class="pre">NBoot.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.NBoot.name"><code class="docutils literal notranslate"><span class="pre">NBoot.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.NBoot.priority"><code class="docutils literal notranslate"><span class="pre">NBoot.priority</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.NBoot.update"><code class="docutils literal notranslate"><span class="pre">NBoot.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.ParameterBounds"><code class="docutils literal notranslate"><span class="pre">ParameterBounds</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.ParameterBounds.update"><code class="docutils literal notranslate"><span class="pre">ParameterBounds.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XFitRange"><code class="docutils literal notranslate"><span class="pre">XFitRange</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XFitRange.coord"><code class="docutils literal notranslate"><span class="pre">XFitRange.coord</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XFitRange.group"><code class="docutils literal notranslate"><span class="pre">XFitRange.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XFitRange.plot"><code class="docutils literal notranslate"><span class="pre">XFitRange.plot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XFitRange.range"><code class="docutils literal notranslate"><span class="pre">XFitRange.range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XFitRange.set_limit"><code class="docutils literal notranslate"><span class="pre">XFitRange.set_limit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XFitRange.transpose"><code class="docutils literal notranslate"><span class="pre">XFitRange.transpose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XFitRange.update"><code class="docutils literal notranslate"><span class="pre">XFitRange.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XLineRange"><code class="docutils literal notranslate"><span class="pre">XLineRange</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XLineRange.coord"><code class="docutils literal notranslate"><span class="pre">XLineRange.coord</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XLineRange.plot"><code class="docutils literal notranslate"><span class="pre">XLineRange.plot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.XLineRange.transpose"><code class="docutils literal notranslate"><span class="pre">XLineRange.transpose</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.YFitRange"><code class="docutils literal notranslate"><span class="pre">YFitRange</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.YFitRange.coord"><code class="docutils literal notranslate"><span class="pre">YFitRange.coord</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.YFitRange.group"><code class="docutils literal notranslate"><span class="pre">YFitRange.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.YFitRange.plot"><code class="docutils literal notranslate"><span class="pre">YFitRange.plot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.YFitRange.range"><code class="docutils literal notranslate"><span class="pre">YFitRange.range</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.YFitRange.set_limit"><code class="docutils literal notranslate"><span class="pre">YFitRange.set_limit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.YFitRange.transpose"><code class="docutils literal notranslate"><span class="pre">YFitRange.transpose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.YFitRange.update"><code class="docutils literal notranslate"><span class="pre">YFitRange.update()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.bootstrap"><code class="docutils literal notranslate"><span class="pre">bootstrap()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plotters.html#psy_reg.plotters.calc_ci"><code class="docutils literal notranslate"><span class="pre">calc_ci()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html"><code class="docutils literal notranslate"><span class="pre">get_versions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.patch_prior_1_0"><code class="docutils literal notranslate"><span class="pre">patch_prior_1_0()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.patches"><code class="docutils literal notranslate"><span class="pre">patches</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.rcParams"><code class="docutils literal notranslate"><span class="pre">rcParams</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_callable"><code class="docutils literal notranslate"><span class="pre">validate_callable()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_fit"><code class="docutils literal notranslate"><span class="pre">validate_fit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_fix"><code class="docutils literal notranslate"><span class="pre">validate_fix()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_ideal"><code class="docutils literal notranslate"><span class="pre">validate_ideal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_iter"><code class="docutils literal notranslate"><span class="pre">validate_iter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_line_xlim"><code class="docutils literal notranslate"><span class="pre">validate_line_xlim()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_list"><code class="docutils literal notranslate"><span class="pre">validate_list</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_list.dtype"><code class="docutils literal notranslate"><span class="pre">validate_list.dtype</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_p0"><code class="docutils literal notranslate"><span class="pre">validate_p0()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_param_bounds"><code class="docutils literal notranslate"><span class="pre">validate_param_bounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.plugin.html#psy_reg.plugin.validate_stringlist"><code class="docutils literal notranslate"><span class="pre">validate_stringlist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.utils.html"><code class="docutils literal notranslate"><span class="pre">GenericModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.GenericModel.estimate_p0"><code class="docutils literal notranslate"><span class="pre">GenericModel.estimate_p0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.GenericModel.fit"><code class="docutils literal notranslate"><span class="pre">GenericModel.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.GenericModel.func_args"><code class="docutils literal notranslate"><span class="pre">GenericModel.func_args()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.GenericModel.func_kwargs"><code class="docutils literal notranslate"><span class="pre">GenericModel.func_kwargs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.GenericModel.function"><code class="docutils literal notranslate"><span class="pre">GenericModel.function()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.GenericModel.pcov"><code class="docutils literal notranslate"><span class="pre">GenericModel.pcov</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.GenericModel.predict"><code class="docutils literal notranslate"><span class="pre">GenericModel.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.GenericModel.rsquared"><code class="docutils literal notranslate"><span class="pre">GenericModel.rsquared</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/psy_reg.utils.html#psy_reg.utils.rsquared"><code class="docutils literal notranslate"><span class="pre">rsquared()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <!--
+SPDX-FileCopyrightText: 2021-2024 Helmholtz-Zentrum hereon GmbH
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
+<footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api/psy_reg.html" class="btn btn-neutral float-right" title="psy_reg package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2024 Helmholtz-Zentrum hereon GmbH.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+
+<div class="footer">
+    <span class="creativecommons">
+    <a href="https://creativecommons.org/licenses/by/4.0/" >
+    <img style="height: 1.5em;" src="_static/license_logo.png" border="0" alt="Creative Commons License"/>
+    </a>
+    This documentation is licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/">
+    CC-BY-4.0
+    </a>
+    </span>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>psyplot plot methods &mdash; psy-reg  documentation</title>
+  <title>Installation &mdash; psy-reg  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/nc-table-styles.css?v=d585f46f" />
@@ -23,7 +23,9 @@
         <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="api.html" />
+    <link rel="prev" title="Welcome to psy-reg’s documentation!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,9 +48,9 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-for-development">Installation for development</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-for-development">Installation for development</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a><ul>
@@ -111,9 +113,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">psyplot plot methods</li>
+      <li class="breadcrumb-item active">Installation</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/plot_methods.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -121,21 +123,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="psyplot-plot-methods">
-<span id="plot-methods"></span><h1>psyplot plot methods<a class="headerlink" href="#psyplot-plot-methods" title="Link to this heading"></a></h1>
-<p>This plugin defines the following new plot methods for the
-<code class="xref py py-class docutils literal notranslate"><span class="pre">psyplot.project.ProjectPlotter</span></code> class. They can, for example, be
-accessed through</p>
-<table class="autosummary longtable docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/psyplot.project.plot.linreg.html#psyplot.project.plot.linreg" title="psyplot.project.plot.linreg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linreg</span></code></a>(*args, **kwargs)</p></td>
-<td><p>Draw a fit from x to y</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/psyplot.project.plot.densityreg.html#psyplot.project.plot.densityreg" title="psyplot.project.plot.densityreg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">densityreg</span></code></a>(*args, **kwargs)</p></td>
-<td><p>Make a density plot and draw a fit from x to y of points</p></td>
-</tr>
-</tbody>
-</table>
+  <section id="installation">
+<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page has been automatically generated as has not yet been reviewed by the
+authors of psy-reg!</p>
+</div>
+<p>To install the <cite>psy-reg</cite> package, we recommend that
+you install it from PyPi via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">psy</span><span class="o">-</span><span class="n">reg</span>
+</pre></div>
+</div>
+<p>Or install it directly from <a class="reference external" href="https://codebase.helmholtz.cloud/psyplot/psy-reg">the source code repository on Gitlab</a> via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">codebase</span><span class="o">.</span><span class="n">helmholtz</span><span class="o">.</span><span class="n">cloud</span><span class="o">/</span><span class="n">psyplot</span><span class="o">/</span><span class="n">psy</span><span class="o">-</span><span class="n">reg</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>The latter should however only be done if you want to access the development
+versions.</p>
+<section id="installation-for-development">
+<span id="install-develop"></span><h2>Installation for development<a class="headerlink" href="#installation-for-development" title="Link to this heading"></a></h2>
+<p>Please head over to our <a class="reference internal" href="contributing.html#contributing"><span class="std std-ref">contributing guide</span></a> for
+installation instruction for development.</p>
+</section>
 </section>
 
 
@@ -147,7 +157,10 @@ SPDX-FileCopyrightText: 2021-2024 Helmholtz-Zentrum hereon GmbH
 SPDX-License-Identifier: CC-BY-4.0
 -->
 
-<footer>
+<footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to psy-reg’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

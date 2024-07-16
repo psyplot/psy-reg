@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>psyplot.project.plot.densityreg &mdash; psy-reg 1.3.0+7.g50fe3e1 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/plot_directive.css" type="text/css" />
+  <title>psyplot.project.plot.densityreg &mdash; psy-reg  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/nc-table-styles.css?v=d585f46f" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Contributing to psy-reg" href="../contribute.html" />
-    <link rel="prev" title="psyplot.project.plot.linreg" href="psyplot.project.plot.linreg.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -28,28 +31,70 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> psy-reg
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            psy-reg
           </a>
-              <div class="version">
-                1.3.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installing.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../plot_methods.html">psyplot plot methods</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="psyplot.project.plot.linreg.html">psyplot.project.plot.linreg</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">psyplot.project.plot.densityreg</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#installation-for-development">Installation for development</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contributing to psy-reg</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/psy_reg.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/psy_reg.html">psy_reg package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/psy_reg.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html"><code class="docutils literal notranslate"><span class="pre">Ci</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter"><code class="docutils literal notranslate"><span class="pre">DensityRegPlotter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.FitPointDensity"><code class="docutils literal notranslate"><span class="pre">FitPointDensity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.FixPoint"><code class="docutils literal notranslate"><span class="pre">FixPoint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.IdealLine"><code class="docutils literal notranslate"><span class="pre">IdealLine</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.IdealLineColor"><code class="docutils literal notranslate"><span class="pre">IdealLineColor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.InitialParameters"><code class="docutils literal notranslate"><span class="pre">InitialParameters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.LinRegPlotter"><code class="docutils literal notranslate"><span class="pre">LinRegPlotter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.LinRegTranspose"><code class="docutils literal notranslate"><span class="pre">LinRegTranspose</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFit"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.LinearRegressionFitCombined"><code class="docutils literal notranslate"><span class="pre">LinearRegressionFitCombined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.NBoot"><code class="docutils literal notranslate"><span class="pre">NBoot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.ParameterBounds"><code class="docutils literal notranslate"><span class="pre">ParameterBounds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.XFitRange"><code class="docutils literal notranslate"><span class="pre">XFitRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.XLineRange"><code class="docutils literal notranslate"><span class="pre">XLineRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.YFitRange"><code class="docutils literal notranslate"><span class="pre">YFitRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.bootstrap"><code class="docutils literal notranslate"><span class="pre">bootstrap()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.calc_ci"><code class="docutils literal notranslate"><span class="pre">calc_ci()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html"><code class="docutils literal notranslate"><span class="pre">get_versions()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.patch_prior_1_0"><code class="docutils literal notranslate"><span class="pre">patch_prior_1_0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.patches"><code class="docutils literal notranslate"><span class="pre">patches</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.rcParams"><code class="docutils literal notranslate"><span class="pre">rcParams</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.validate_callable"><code class="docutils literal notranslate"><span class="pre">validate_callable()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.validate_fit"><code class="docutils literal notranslate"><span class="pre">validate_fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.validate_fix"><code class="docutils literal notranslate"><span class="pre">validate_fix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.validate_ideal"><code class="docutils literal notranslate"><span class="pre">validate_ideal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.validate_iter"><code class="docutils literal notranslate"><span class="pre">validate_iter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.validate_line_xlim"><code class="docutils literal notranslate"><span class="pre">validate_line_xlim()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.validate_list"><code class="docutils literal notranslate"><span class="pre">validate_list</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.validate_p0"><code class="docutils literal notranslate"><span class="pre">validate_p0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.validate_param_bounds"><code class="docutils literal notranslate"><span class="pre">validate_param_bounds()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.plugin.html#psy_reg.plugin.validate_stringlist"><code class="docutils literal notranslate"><span class="pre">validate_stringlist()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.utils.html"><code class="docutils literal notranslate"><span class="pre">GenericModel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/psy_reg.utils.html#psy_reg.utils.rsquared"><code class="docutils literal notranslate"><span class="pre">rsquared()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribution and development hints</a></li>
 </ul>
 
         </div>
@@ -65,9 +110,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../plot_methods.html">psyplot plot methods</a> &raquo;</li>
-      <li>psyplot.project.plot.densityreg</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">psyplot.project.plot.densityreg</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/generated/psyplot.project.plot.densityreg.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -78,144 +122,18 @@
            <div itemprop="articleBody">
              
   <section id="psyplot-project-plot-densityreg">
-<h1>psyplot.project.plot.densityreg<a class="headerlink" href="#psyplot-project-plot-densityreg" title="Permalink to this headline"></a></h1>
+<h1>psyplot.project.plot.densityreg<a class="headerlink" href="#psyplot-project-plot-densityreg" title="Link to this heading"></a></h1>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="psyplot.project.plot.densityreg">
-<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">densityreg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psyplot.project.plot.densityreg" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">plot.</span></span><span class="sig-name descname"><span class="pre">densityreg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#psyplot.project.plot.densityreg" title="Link to this definition"></a></dt>
 <dd><p>Make a density plot and draw a fit from x to y of points</p>
-<blockquote>
-<div><blockquote>
-<div><p>This plotting method adds data arrays and plots them via
+<p>This plotting method adds data arrays and plots them via
 <a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter" title="psy_reg.plotters.DensityRegPlotter"><code class="xref py py-class docutils literal notranslate"><span class="pre">psy_reg.plotters.DensityRegPlotter</span></code></a> plotters</p>
 <p>To plot data from a netCDF file type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">psy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">densityreg</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;my_variable&#39;</span><span class="p">],</span> <span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Possible formatoptions are</p>
-</div></blockquote>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.axiscolor" title="psy_reg.plotters.DensityRegPlotter.axiscolor"><code class="xref py py-attr docutils literal notranslate"><span class="pre">axiscolor</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.background" title="psy_reg.plotters.DensityRegPlotter.background"><code class="xref py py-attr docutils literal notranslate"><span class="pre">background</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.bins" title="psy_reg.plotters.DensityRegPlotter.bins"><code class="xref py py-attr docutils literal notranslate"><span class="pre">bins</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.bounds" title="psy_reg.plotters.DensityRegPlotter.bounds"><code class="xref py py-attr docutils literal notranslate"><span class="pre">bounds</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.cbar" title="psy_reg.plotters.DensityRegPlotter.cbar"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cbar</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.cbarspacing" title="psy_reg.plotters.DensityRegPlotter.cbarspacing"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cbarspacing</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ci" title="psy_reg.plotters.DensityRegPlotter.ci"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ci</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.clabel" title="psy_reg.plotters.DensityRegPlotter.clabel"><code class="xref py py-attr docutils literal notranslate"><span class="pre">clabel</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.clabelprops" title="psy_reg.plotters.DensityRegPlotter.clabelprops"><code class="xref py py-attr docutils literal notranslate"><span class="pre">clabelprops</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.clabelsize" title="psy_reg.plotters.DensityRegPlotter.clabelsize"><code class="xref py py-attr docutils literal notranslate"><span class="pre">clabelsize</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.clabelweight" title="psy_reg.plotters.DensityRegPlotter.clabelweight"><code class="xref py py-attr docutils literal notranslate"><span class="pre">clabelweight</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.cmap" title="psy_reg.plotters.DensityRegPlotter.cmap"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cmap</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.color" title="psy_reg.plotters.DensityRegPlotter.color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">color</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.coord" title="psy_reg.plotters.DensityRegPlotter.coord"><code class="xref py py-attr docutils literal notranslate"><span class="pre">coord</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.cticklabels" title="psy_reg.plotters.DensityRegPlotter.cticklabels"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cticklabels</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ctickprops" title="psy_reg.plotters.DensityRegPlotter.ctickprops"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ctickprops</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.cticks" title="psy_reg.plotters.DensityRegPlotter.cticks"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cticks</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.cticksize" title="psy_reg.plotters.DensityRegPlotter.cticksize"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cticksize</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ctickweight" title="psy_reg.plotters.DensityRegPlotter.ctickweight"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ctickweight</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.datagrid" title="psy_reg.plotters.DensityRegPlotter.datagrid"><code class="xref py py-attr docutils literal notranslate"><span class="pre">datagrid</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.density" title="psy_reg.plotters.DensityRegPlotter.density"><code class="xref py py-attr docutils literal notranslate"><span class="pre">density</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.error" title="psy_reg.plotters.DensityRegPlotter.error"><code class="xref py py-attr docutils literal notranslate"><span class="pre">error</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.erroralpha" title="psy_reg.plotters.DensityRegPlotter.erroralpha"><code class="xref py py-attr docutils literal notranslate"><span class="pre">erroralpha</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.extend" title="psy_reg.plotters.DensityRegPlotter.extend"><code class="xref py py-attr docutils literal notranslate"><span class="pre">extend</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.figtitle" title="psy_reg.plotters.DensityRegPlotter.figtitle"><code class="xref py py-attr docutils literal notranslate"><span class="pre">figtitle</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.figtitleprops" title="psy_reg.plotters.DensityRegPlotter.figtitleprops"><code class="xref py py-attr docutils literal notranslate"><span class="pre">figtitleprops</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.figtitlesize" title="psy_reg.plotters.DensityRegPlotter.figtitlesize"><code class="xref py py-attr docutils literal notranslate"><span class="pre">figtitlesize</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.figtitleweight" title="psy_reg.plotters.DensityRegPlotter.figtitleweight"><code class="xref py py-attr docutils literal notranslate"><span class="pre">figtitleweight</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.fit" title="psy_reg.plotters.DensityRegPlotter.fit"><code class="xref py py-attr docutils literal notranslate"><span class="pre">fit</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.fix" title="psy_reg.plotters.DensityRegPlotter.fix"><code class="xref py py-attr docutils literal notranslate"><span class="pre">fix</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.grid" title="psy_reg.plotters.DensityRegPlotter.grid"><code class="xref py py-attr docutils literal notranslate"><span class="pre">grid</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.id_color" title="psy_reg.plotters.DensityRegPlotter.id_color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">id_color</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ideal" title="psy_reg.plotters.DensityRegPlotter.ideal"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ideal</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.interp_bounds" title="psy_reg.plotters.DensityRegPlotter.interp_bounds"><code class="xref py py-attr docutils literal notranslate"><span class="pre">interp_bounds</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.labelprops" title="psy_reg.plotters.DensityRegPlotter.labelprops"><code class="xref py py-attr docutils literal notranslate"><span class="pre">labelprops</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.labelsize" title="psy_reg.plotters.DensityRegPlotter.labelsize"><code class="xref py py-attr docutils literal notranslate"><span class="pre">labelsize</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.labelweight" title="psy_reg.plotters.DensityRegPlotter.labelweight"><code class="xref py py-attr docutils literal notranslate"><span class="pre">labelweight</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.legend" title="psy_reg.plotters.DensityRegPlotter.legend"><code class="xref py py-attr docutils literal notranslate"><span class="pre">legend</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.legendlabels" title="psy_reg.plotters.DensityRegPlotter.legendlabels"><code class="xref py py-attr docutils literal notranslate"><span class="pre">legendlabels</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.levels" title="psy_reg.plotters.DensityRegPlotter.levels"><code class="xref py py-attr docutils literal notranslate"><span class="pre">levels</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.line_xlim" title="psy_reg.plotters.DensityRegPlotter.line_xlim"><code class="xref py py-attr docutils literal notranslate"><span class="pre">line_xlim</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.lineplot" title="psy_reg.plotters.DensityRegPlotter.lineplot"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lineplot</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.linewidth" title="psy_reg.plotters.DensityRegPlotter.linewidth"><code class="xref py py-attr docutils literal notranslate"><span class="pre">linewidth</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.marker" title="psy_reg.plotters.DensityRegPlotter.marker"><code class="xref py py-attr docutils literal notranslate"><span class="pre">marker</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.markersize" title="psy_reg.plotters.DensityRegPlotter.markersize"><code class="xref py py-attr docutils literal notranslate"><span class="pre">markersize</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.mask" title="psy_reg.plotters.DensityRegPlotter.mask"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mask</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.mask_datagrid" title="psy_reg.plotters.DensityRegPlotter.mask_datagrid"><code class="xref py py-attr docutils literal notranslate"><span class="pre">mask_datagrid</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.maskbetween" title="psy_reg.plotters.DensityRegPlotter.maskbetween"><code class="xref py py-attr docutils literal notranslate"><span class="pre">maskbetween</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.maskgeq" title="psy_reg.plotters.DensityRegPlotter.maskgeq"><code class="xref py py-attr docutils literal notranslate"><span class="pre">maskgeq</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.maskgreater" title="psy_reg.plotters.DensityRegPlotter.maskgreater"><code class="xref py py-attr docutils literal notranslate"><span class="pre">maskgreater</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.maskleq" title="psy_reg.plotters.DensityRegPlotter.maskleq"><code class="xref py py-attr docutils literal notranslate"><span class="pre">maskleq</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.maskless" title="psy_reg.plotters.DensityRegPlotter.maskless"><code class="xref py py-attr docutils literal notranslate"><span class="pre">maskless</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.miss_color" title="psy_reg.plotters.DensityRegPlotter.miss_color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">miss_color</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.nboot" title="psy_reg.plotters.DensityRegPlotter.nboot"><code class="xref py py-attr docutils literal notranslate"><span class="pre">nboot</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.normed" title="psy_reg.plotters.DensityRegPlotter.normed"><code class="xref py py-attr docutils literal notranslate"><span class="pre">normed</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.p0" title="psy_reg.plotters.DensityRegPlotter.p0"><code class="xref py py-attr docutils literal notranslate"><span class="pre">p0</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.param_bounds" title="psy_reg.plotters.DensityRegPlotter.param_bounds"><code class="xref py py-attr docutils literal notranslate"><span class="pre">param_bounds</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.plot" title="psy_reg.plotters.DensityRegPlotter.plot"><code class="xref py py-attr docutils literal notranslate"><span class="pre">plot</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.post" title="psy_reg.plotters.DensityRegPlotter.post"><code class="xref py py-attr docutils literal notranslate"><span class="pre">post</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.post_timing" title="psy_reg.plotters.DensityRegPlotter.post_timing"><code class="xref py py-attr docutils literal notranslate"><span class="pre">post_timing</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.precision" title="psy_reg.plotters.DensityRegPlotter.precision"><code class="xref py py-attr docutils literal notranslate"><span class="pre">precision</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.sym_lims" title="psy_reg.plotters.DensityRegPlotter.sym_lims"><code class="xref py py-attr docutils literal notranslate"><span class="pre">sym_lims</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.text" title="psy_reg.plotters.DensityRegPlotter.text"><code class="xref py py-attr docutils literal notranslate"><span class="pre">text</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ticksize" title="psy_reg.plotters.DensityRegPlotter.ticksize"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ticksize</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.tickweight" title="psy_reg.plotters.DensityRegPlotter.tickweight"><code class="xref py py-attr docutils literal notranslate"><span class="pre">tickweight</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.tight" title="psy_reg.plotters.DensityRegPlotter.tight"><code class="xref py py-attr docutils literal notranslate"><span class="pre">tight</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.title" title="psy_reg.plotters.DensityRegPlotter.title"><code class="xref py py-attr docutils literal notranslate"><span class="pre">title</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.titleprops" title="psy_reg.plotters.DensityRegPlotter.titleprops"><code class="xref py py-attr docutils literal notranslate"><span class="pre">titleprops</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.titlesize" title="psy_reg.plotters.DensityRegPlotter.titlesize"><code class="xref py py-attr docutils literal notranslate"><span class="pre">titlesize</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.titleweight" title="psy_reg.plotters.DensityRegPlotter.titleweight"><code class="xref py py-attr docutils literal notranslate"><span class="pre">titleweight</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.transpose" title="psy_reg.plotters.DensityRegPlotter.transpose"><code class="xref py py-attr docutils literal notranslate"><span class="pre">transpose</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xlabel" title="psy_reg.plotters.DensityRegPlotter.xlabel"><code class="xref py py-attr docutils literal notranslate"><span class="pre">xlabel</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xlim" title="psy_reg.plotters.DensityRegPlotter.xlim"><code class="xref py py-attr docutils literal notranslate"><span class="pre">xlim</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xrange" title="psy_reg.plotters.DensityRegPlotter.xrange"><code class="xref py py-attr docutils literal notranslate"><span class="pre">xrange</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xrotation" title="psy_reg.plotters.DensityRegPlotter.xrotation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">xrotation</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xticklabels" title="psy_reg.plotters.DensityRegPlotter.xticklabels"><code class="xref py py-attr docutils literal notranslate"><span class="pre">xticklabels</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xtickprops" title="psy_reg.plotters.DensityRegPlotter.xtickprops"><code class="xref py py-attr docutils literal notranslate"><span class="pre">xtickprops</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.xticks" title="psy_reg.plotters.DensityRegPlotter.xticks"><code class="xref py py-attr docutils literal notranslate"><span class="pre">xticks</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ylabel" title="psy_reg.plotters.DensityRegPlotter.ylabel"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ylabel</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ylim" title="psy_reg.plotters.DensityRegPlotter.ylim"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ylim</span></code></a></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.yrange" title="psy_reg.plotters.DensityRegPlotter.yrange"><code class="xref py py-attr docutils literal notranslate"><span class="pre">yrange</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.yrotation" title="psy_reg.plotters.DensityRegPlotter.yrotation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">yrotation</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.yticklabels" title="psy_reg.plotters.DensityRegPlotter.yticklabels"><code class="xref py py-attr docutils literal notranslate"><span class="pre">yticklabels</span></code></a></p></td>
-<td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.ytickprops" title="psy_reg.plotters.DensityRegPlotter.ytickprops"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ytickprops</span></code></a></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/psy_reg.plotters.html#psy_reg.plotters.DensityRegPlotter.yticks" title="psy_reg.plotters.DensityRegPlotter.yticks"><code class="xref py py-attr docutils literal notranslate"><span class="pre">yticks</span></code></a></p></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-<div class="admonition-examples admonition">
-<p class="admonition-title">Examples</p>
+<p class="rubric">Examples</p>
 <p>To explore the formatoptions and their documentations, use the
 <code class="docutils literal notranslate"><span class="pre">keys</span></code>, <code class="docutils literal notranslate"><span class="pre">summaries</span></code> and <code class="docutils literal notranslate"><span class="pre">docs</span></code> methods. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">psyplot.project</span> <span class="k">as</span> <span class="nn">psy</span>
@@ -235,7 +153,6 @@
 <span class="gp">&gt;&gt;&gt; </span><span class="n">psy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">densityreg</span><span class="o">.</span><span class="n">plot</span>
 </pre></div>
 </div>
-</div>
 </dd></dl>
 
 </section>
@@ -243,21 +160,38 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="psyplot.project.plot.linreg.html" class="btn btn-neutral float-left" title="psyplot.project.plot.linreg" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../contribute.html" class="btn btn-neutral float-right" title="Contributing to psy-reg" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <!--
+SPDX-FileCopyrightText: 2021-2024 Helmholtz-Zentrum hereon GmbH
+
+SPDX-License-Identifier: CC-BY-4.0
+-->
+
+<footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021 Helmholtz-Zentrum Hereon, 2020-2021 Helmholtz-Zentrum Geesthacht, 2016-2021 University of Lausanne.</p>
+    <p>&#169; Copyright 2021-2024 Helmholtz-Zentrum hereon GmbH.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+  
+
+<div class="footer">
+    <span class="creativecommons">
+    <a href="https://creativecommons.org/licenses/by/4.0/" >
+    <img style="height: 1.5em;" src="../_static/license_logo.png" border="0" alt="Creative Commons License"/>
+    </a>
+    This documentation is licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/">
+    CC-BY-4.0
+    </a>
+    </span>
+</div>
+
+
 
 </footer>
         </div>
